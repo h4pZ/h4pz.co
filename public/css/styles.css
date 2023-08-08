@@ -1,0 +1,108 @@
+body {
+    background-color: #121217;
+    font-family: 'IBM Plex Sans', sans;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;  /* New line: set the height of the row to the full viewport height */
+}
+.column {
+    flex: 50%;
+    position: relative;
+    overflow: hidden;
+    height: 100%;  /* New line: make sure columns take up the full height of the row */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.column img.full {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    border: 0;
+}
+
+.articles {
+    display: flex;
+    overflow: auto; /* Enable horizontal scrolling if the articles do not fit in the viewport */
+}
+.section {
+    margin-right: 8.4px; /* Optional, adds some spacing between articles */
+}
+
+p {
+    font-family: 'IBM Plex Serif', serif;
+    color: #f1eaea;
+    font-weight: 300;
+}
+
+h1 {
+    color: #82AAED;
+    font-weight: normal;
+    letter-spacing: 4px;
+    padding-right: 10px;
+    text-decoration: none;
+    font-size: 20px;
+
+}
+
+.section h2 a {
+    color: #82AAED;
+    font-weight: normal;
+    letter-spacing: 4px;
+    padding-right: 10px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.socials {
+    color: #a6a6a6;
+    letter-spacing: 8px;
+}
+
+.logo {
+    height: 60px;
+    max-width: 100%;
+}
+
+#rightinfo {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;  /* Adjust padding to your preference */
+    text-align: left;
+}
+
+.social-icons {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;  /* remove bullet points */
+}
+.social-icons li {
+    margin-left: 12px;
+}
+
+.articles, .social-icons {
+    display: flex;
+    align-items: center;
+    overflow: auto;
+}
+
+
+.social-icons li a img {
+    max-width: 18px;  /* Adjust this value to your preference */
+    vertical-align: middle; /* Align the images vertically */
+}
+
+.content-container {
+    margin: 0 auto; /* center the div */
+    padding: 0 15px; /* add space to the left and right */
+    max-width: 800px; /* you can adjust this value to set the maximum width of your content */
+    text-align: center;
+}
+

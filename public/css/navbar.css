@@ -1,0 +1,7 @@
+#navbar h2 a {
+    color: #a6a6a6;
+}
+
+#navbar h2 a.current {
+    color: #82AAED; /* Change this color to whatever you prefer for the active link */
+}
