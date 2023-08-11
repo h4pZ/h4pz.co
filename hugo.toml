@@ -1,3 +1,4 @@
-baseURL = 'https://h4pz.github.io/h4pz.co/'
+baseURL = 'https://h4pz.co/'
+relativeURLs = true
 languageCode = 'en-us'
 title = "h4pz.co"
