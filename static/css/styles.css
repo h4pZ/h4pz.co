@@ -6,13 +6,13 @@ body {
 .row {
     display: flex;
     justify-content: space-between;
-    height: 100vh;  /* New line: set the height of the row to the full viewport height */
+    height: 100vh;
 }
 .column {
     flex: 50%;
     position: relative;
     overflow: hidden;
-    height: 100%;  /* New line: make sure columns take up the full height of the row */
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -27,10 +27,10 @@ body {
 
 .articles {
     display: flex;
-    overflow: auto; /* Enable horizontal scrolling if the articles do not fit in the viewport */
+    overflow: auto;
 }
 .section {
-    margin-right: 8.4px; /* Optional, adds some spacing between articles */
+    margin-right: 8.4px;
 }
 
 p, li {
@@ -79,7 +79,14 @@ h3 {
     padding-right: 10px;
     text-decoration: none;
     font-size: 14px;
+    transition: color 0.3s;
 }
+
+.section h2 a:hover {
+    color: #5C63DF; !important;
+
+}
+
 
 .socials {
     color: #a6a6a6;
@@ -96,7 +103,7 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 20px;  /* adjust padding to your preference */
+    padding: 20px;
     text-align: left;
 }
 
@@ -104,7 +111,7 @@ h3 {
     display: flex;
     padding: 0;
     margin: 0;
-    list-style: none;  /* remove bullet points */
+    list-style: none;
 }
 .social-icons li {
     margin-left: 12px;
@@ -118,8 +125,8 @@ h3 {
 
 
 .social-icons li a img {
-    max-width: 18px;  /* adjust this value to your preference */
-    vertical-align: middle; /* align the images vertically */
+    max-width: 18px;
+    vertical-align: middle;
 }
 
 
@@ -127,7 +134,7 @@ h3 {
     display: flex;
     padding: 0;
     margin: 0;
-    list-style: none;  /* remove bullet points */
+    list-style: none;
 }
 .footer-socials li {
     margin-left: 12px;
@@ -141,8 +148,8 @@ h3 {
 
 
 .footer-socials li a img {
-    width: 10px;  /* adjust this value to your preference */
-    vertical-align: middle; /* align the images vertically */
+    width: 10px;
+    vertical-align: middle;
 }
 
 
@@ -150,9 +157,9 @@ h3 {
 
 
 .content-container {
-    margin: 0 auto; /* center the div */
-    padding: 0 15px; /* add space to the left and right */
-    max-width: 800px; /* you can adjust this value to set the maximum width of your content */
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 800px;
     text-align: center;
 }
 
@@ -181,4 +188,27 @@ a h2 {
 
 .blog-title {
     text-decoration: none;
+}
+
+.blog-title h2 {
+    transition: color 0.3s;
+}
+
+.blog-title:hover h2 {
+    color: #5C63DF; !important;
+}
+
+
+footer {
+    padding: 3%;
+}
+
+a {
+    color: #b2a4fc;
+    transition: color 0.3s;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #e6a4fc;
 }

@@ -1,8 +1,8 @@
 .articles {
     display: flex;
-    flex-wrap: wrap;  /* Allow the sections to wrap to the next line if needed */
-    justify-content: center;  /* Horizontally center the sections */
-    align-items: center;  /* Vertically center the sections (if desired) */
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     overflow: hidden; 
 }
 
@@ -10,11 +10,17 @@
 
 #navbar h2 a {
     color: #a6a6a6;
+    transition: color 0.3s;
 }
 
 #navbar h2 a.current {
-    color: #82AAED; /* Change this color to whatever you prefer for the active link */
+    color: #82AAED;
 }
+
+#navbar h2 a:hover {
+    color: #5C63DF; !important;
+}
+
 
 #navbar {
     padding: 40px;
