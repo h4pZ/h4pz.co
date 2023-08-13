@@ -189,7 +189,7 @@ docker build <dockerfile-path> <name>
 
 Example of Dockerfile
 
-```dockerfile
+```
 FROM alpine:3.13
 RUN apk upgrade
 RUN apk add nginx
@@ -250,7 +250,7 @@ docker service logs <service-name>
 ```
 
 **Note:** Logs need to be output to `stdout` and `stderr`. For example (nginx):
-```dockerfile
+```
 RUN ln -sf /dev/stdout /var/log/nginx/access.log \
     && ln -sf /dev/stderr /var/log/nginx/error.log
 ```
