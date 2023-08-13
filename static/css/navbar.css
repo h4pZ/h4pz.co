@@ -3,7 +3,7 @@
     flex-wrap: wrap;  /* Allow the sections to wrap to the next line if needed */
     justify-content: center;  /* Horizontally center the sections */
     align-items: center;  /* Vertically center the sections (if desired) */
-    overflow: auto; 
+    overflow: hidden; 
 }
 
 
@@ -14,4 +14,8 @@
 
 #navbar h2 a.current {
     color: #82AAED; /* Change this color to whatever you prefer for the active link */
+}
+
+#navbar {
+    padding: 40px;
 }

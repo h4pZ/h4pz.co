@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/styles.css">
+<link rel="stylesheet" href="../../css/navbar.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200&family=IBM+Plex+Serif:wght@200&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&family=IBM+Plex+Serif:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400&family=IBM+Plex+Serif:wght@400&display=swap" rel="stylesheet">
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+    <div class="articles">
+        <article class="section">
+            <h2><a href="../../" >H4PZ</a></h2>
+        </article>
+        <article class="section">
+            <h2><a href="../../projects" >PROJECTS</a></h2>
+        </article>
+        <article class="section">
+            <h2><a href="../../blog" >BLOG</a></h2>
+        </article>
+        <article class="section">
+            <h2><a href="../../about" >ABOUT</a></h2>
+        </article>
+    </div>
+</nav>
+
+
+    </header>
+    
+    
+<div class="content"><h3>Docker</h3></div>
+<div class="content"><p>This document contains information about what docker is and some basic commands. This contains information that I would liked to read when I was starting figuring out what this tool does. It is primarily targeted to a non-so-technical audience like me who doesn&rsquo;t have a CS background.</p>
+<h2 id="docker">Docker</h2>
+<p>Docker delivers software in packages called containers. It&rsquo;s main use is to kill the excuse &ldquo;it runs on my computer&rdquo; because if the software is ran on a docker container then it runs on every computer (if you can install docker on the new computer :)).</p>
+<p>The main two components of docker are it&rsquo;s server and client. Both are just software but they have different purposes. The docker server runs as a background process and waits for instructions. It&rsquo;s main purpose is to create, delete, modify, stop docker containers (programs that are being run on it&rsquo;s own isolated environment). The docker client is a command line software that we use as users. It&rsquo;s main purpose is to help us request changes to the containers to the docker server, like requesting to spin up a docker container.</p>
+<h2 id="docker-image">Docker Image</h2>
+<p>A docker image can be seen as a class in OOP (Object Oriented Programming). Docker images can be built via a Dockerfile file which contains the instructions to build such an image.</p>
+<p>Images are made of multiple layers. These layers are instructions that are used to build the image. Each layer, except the last one is read only. The last layer is defined as the container layer which wraps all the other instructions. This layer is only created once the image is instantiated and any modification to the container is going to be applied to the last layer.</p>
+<p>When a container is deleted only the container layer is deleted (last layer) while the image remains unchanged. This way multiple containers can use the same image but have different interactions and changes without duplication of the previous layers of the image.</p>
+<h2 id="docker-hub">Docker Hub</h2>
+<p>Docker Hub is a public registry, it&rsquo;s like GitHub but for sharing docker images. It contains public and private repositories.</p>
+<h1 id="commands">Commands</h1>
+<p>Below there is a series of useful commands that I&rsquo;ll probably forget and instead of googling them I can access them whenever I want on my website.</p>
+<hr>
+<h2 id="basic-commands">Basic Commands</h2>
+<p>How to run a container. This will create a new &ldquo;instance&rdquo; of the image</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker run &lt;image&gt;
+</span></span></code></pre></div><p>Look at the running containers</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker ps
+</span></span></code></pre></div><p>Look at all the containers</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker ps -a
+</span></span></code></pre></div><p>Run container and drop to shell</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker run -it &lt;image&gt;
+</span></span><span style="display:flex;"><span>docker run --interactive --tty &lt;image&gt;
+</span></span></code></pre></div><p>Run container in the background (de-attach)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker run -d &lt;image&gt;
+</span></span></code></pre></div><p>Container restart settings</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker run --restart <span style="color:#f92672">(</span>always|no|on-failure<span style="color:#f92672">[</span>:maxretries<span style="color:#f92672">]</span>|unless-stopped<span style="color:#f92672">)</span> &lt;image&gt;
+</span></span></code></pre></div><p>Remove container when exited</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker run --rm &lt;image&gt;
+</span></span></code></pre></div><p>Provide a nickname to a container</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker run --name &lt;name&gt; &lt;image&gt;
+</span></span></code></pre></div><p>How to start a stopped container (instance)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker start &lt;container&gt;
+</span></span></code></pre></div><p>Run a command against a container</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker exec &lt;container&gt; &lt;command&gt;
+</span></span></code></pre></div><p>Drop into the container shell. Note that the shell must be available in the image OS. For example, for alpine the default one is <code>ash</code> but for ubuntu it is <code>bash</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker exec -it &lt;container&gt; &lt;shell&gt;
+</span></span></code></pre></div><p>Copy / move files from and to the container.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker cp &lt;source&gt; &lt;container&gt;:&lt;destination&gt;
+</span></span><span style="display:flex;"><span>docker cp &lt;container&gt;:&lt;source&gt; &lt;destination&gt;
+</span></span></code></pre></div><p>View container information</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker inspect &lt;container&gt;
+</span></span></code></pre></div><p>Create a container image</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker commint &lt;container&gt; &lt;name&gt;
+</span></span></code></pre></div><p>Map container port to host server</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker run -p &lt;host_port&gt;:&lt;container_port&gt; &lt;container&gt;
+</span></span></code></pre></div><p>Run a container de-attach exposing a port with a name</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker run -dt -p &lt;local-port&gt;:&lt;docker-port&gt; --name &lt;container-name&gt; &lt;image-name&gt;
+</span></span></code></pre></div><p>Get an image from docker hub</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker pull &lt;image&gt;
+</span></span></code></pre></div><p>Look at the images you have locally</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker image ls
+</span></span></code></pre></div><p>Remove an image</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker image rm &lt;image-name&gt;
+</span></span></code></pre></div><p>Remove images without at least one container associated to them</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker image prune -a
+</span></span></code></pre></div><p>Get information about an image</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker image inspect &lt;image-name&gt;
+</span></span></code></pre></div><p>Log in to the Docker hub</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker loging --username<span style="color:#f92672">=</span>&lt;username&gt;
+</span></span></code></pre></div><p>Tag an image</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker tag &lt;image&gt; &lt;username&gt;/&lt;repo&gt;:&lt;tag&gt;
+</span></span></code></pre></div><p>Push image to docker hub</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker push &lt;username&gt;/&lt;repo-name&gt;
+</span></span></code></pre></div><p>Log out of Docker hub</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker logout
+</span></span></code></pre></div><p>Build a Dockerfile image</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker build &lt;dockerfile-path&gt; &lt;name&gt;
+</span></span></code></pre></div><p>Example of Dockerfile</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dockerfile" data-lang="dockerfile"><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> alpine:3.13</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> apk upgrade<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> apk add nginx<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> files/default.conf /etc/nginx/conf.d/default.conf<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> mkdir -p /var/www/html<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">WORKDIR</span><span style="color:#e6db74"> /var/www/html</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> --chown<span style="color:#f92672">=</span>nginx:nginx /files/html/ .<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">EXPOSE</span><span style="color:#e6db74"> 80</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">CMD</span> [ <span style="color:#e6db74">&#34;nginx&#34;</span>, <span style="color:#e6db74">&#34;-g&#34;</span>, <span style="color:#e6db74">&#34;pid /tmp/nginx.pid; daemon off;&#34;</span> ]<span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><p>Delete a container once it finished running</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker container run --rm &lt;container-name&gt;
+</span></span></code></pre></div><p>Remove all stopped containers. The <code>-f</code> flag is to force it and do not prompt for confirmation.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker container prune -f
+</span></span></code></pre></div><p>Exposing a port of the container</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker container run -d --expose &lt;port-number&gt; &lt;image-name&gt;
+</span></span></code></pre></div><p>Look at the exposed ports of a container</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker container port &lt;container-name&gt;
+</span></span></code></pre></div><p>Start a container with a command</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker container run &lt;image-name&gt; &lt;command&gt;
+</span></span></code></pre></div><p>Executing a command on a container</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker container exec -it &lt;container-name&gt; &lt;command&gt;
+</span></span></code></pre></div><p>Show the logs of a container</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker container logs &lt;container-name&gt;
+</span></span></code></pre></div><p>Show the logs of all the containers in a service</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker service logs &lt;service-name&gt;
+</span></span></code></pre></div><p><strong>Note:</strong> Logs need to be output to <code>stdout</code> and <code>stderr</code>. For example (nginx):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dockerfile" data-lang="dockerfile"><span style="display:flex;"><span><span style="color:#66d9ef">RUN</span> ln -sf /dev/stdout /var/log/nginx/access.log <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    <span style="color:#f92672">&amp;&amp;</span> ln -sf /dev/stderr /var/log/nginx/error.log<span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><h2 id="networking">Networking</h2>
+<p>List of networks</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker network ls
+</span></span></code></pre></div><p>Get detailed information of a network</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker network inspect &lt;network-name&gt;
+</span></span></code></pre></div><p>Create a new network</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker network create &lt;network-name&gt;
+</span></span></code></pre></div><p>Delete a network</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker network rm &lt;network-name&gt;
+</span></span></code></pre></div><p>Delete all unused networks</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker network prune
+</span></span></code></pre></div><p>Adding a container to a network</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker network connect &lt;network-name&gt; &lt;container-name&gt;
+</span></span></code></pre></div><p>Removing a container from a network</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker network disconnect &lt;network-name&gt; &lt;container-name&gt;
+</span></span></code></pre></div><p>Create a network with a subnet and gateway</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker network create --subnet &lt;subnet&gt; --gateway &lt;gateway&gt; &lt;network-name&gt;
+</span></span><span style="display:flex;"><span>docker network create --subnet &lt;subnet&gt; --gateway &lt;gateway&gt; --ip<span style="color:#f92672">=</span>range<span style="color:#f92672">=</span>&lt;ip_range&gt; --driver<span style="color:#f92672">=</span>&lt;driver&gt; &lt;network-name&gt;
+</span></span></code></pre></div><h2 id="volumes">Volumes</h2>
+<p>Docker containers have two types of data. The first one is non-persistent data which is tied to the life-cycle of the container. The persistent type of data in docker is called volumes and it isn&rsquo;t tied to the life-cycle of the container.</p>
+<p>List all volumes on a host</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker volume ls
+</span></span></code></pre></div><p>Create a volume</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker volume create &lt;volume-name&gt;
+</span></span></code></pre></div><p>Inspect a volume</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker volume inspect &lt;volume-name&gt;
+</span></span></code></pre></div><p>Deleting a volume</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker volume rm &lt;volumen-name&gt;
+</span></span></code></pre></div><p>Remove all unused volumes</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker volume prune
+</span></span></code></pre></div><p>Using bind mounts</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># With the mount flag</span>
+</span></span><span style="display:flex;"><span>docker container run -d --name &lt;container-name&gt; --mount type<span style="color:#f92672">=</span>bind,source<span style="color:#f92672">=</span>&lt;source&gt;,target<span style="color:#f92672">=</span>&lt;target&gt; &lt;image-name&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Using the volume flag</span>
+</span></span><span style="display:flex;"><span>docker container run -d --name &lt;container-name&gt; -v &lt;source&gt;:&lt;target&gt; &lt;image-name&gt;
+</span></span></code></pre></div><h2 id="dockerfile">Dockerfile</h2>
+<p>Dockerfiles are instructions on how to build an image. It has the following instructions.</p>
+<p><code>FROM:</code> sets the base image.</p>
+<p><code>RUN:</code> execute any commands.</p>
+<p><code>CMD:</code> default execution of the container. There can only be one at the end of the dockerfile.</p>
+<p><code>LABEL:</code> adds metadata to an image.</p>
+<p><code>EXPOSE:</code> informs docker that the container listens to the specified network ports at runtime.</p>
+<p><code>ENV:</code> set the environment variable <!-- raw HTML omitted --> to the <!-- raw HTML omitted --></p>
+<p><code>ADD:</code> copies new files, directories, or remote file URLs from <!-- raw HTML omitted --> and adds them to the file-system of the image at the path <!-- raw HTML omitted --></p>
+<p><code>WORKDIR:</code> set the working directory for any <code>RUN</code>, <code>CMD</code>, <code>ENTRYPOINT</code>, <code>COPY</code> and <code>ADD</code> instructions that follow it in the Dockerfile.</p>
+<p><code>ARG:</code> Defines a variable that users can pass at build-time to the builder with the docker <code>build</code> command using the <code>--build-arg &lt;varname&gt;=&lt;value</code> flag.</p>
+<p><code>ONBUILD:</code> Adds a trigger instruction to the image that executes when the image is used as the base for another build.</p>
+<p><code>HEALTHCHECK:</code> Tells docker how to test a container to check that it is still working.</p>
+<p><code>SHELL:</code> Allows the default shell used for the shell form of commands to be overridden.</p>
+<p><code>USER:</code> Specifies the user that is going to run all the commands (<code>RUN</code> and <code>CMD</code>)</p>
+<p><code>VOLUME:</code> Creates a mount point with the specified name and marks it as holding externally mounted volumes from native host or other containers.</p>
+<h2 id="images">Images</h2>
+<p>Build an image</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker image built -t &lt;image-name&gt;:&lt;tag&gt;
+</span></span></code></pre></div><p>Build an image from a docker repository</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker image build -t &lt;image-name&gt;:&lt;tag&gt; &lt;git-url&gt;<span style="color:#ae81ff">\#</span>&lt;branch&gt;
+</span></span></code></pre></div><p>Adding a name and an optional tag</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker image build -t &lt;name&gt;:&lt;tag&gt;
+</span></span></code></pre></div><p>Use the commit hash as the image tag</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git log -1 --pretty<span style="color:#f92672">=</span>%H
+</span></span></code></pre></div><p>Create an image for docker hub</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker image tag &lt;image-name&gt;:&lt;tag&gt; &lt;username&gt;/&lt;image-name&gt;:&lt;tag&gt;
+</span></span></code></pre></div><p>Pushing an image to docker hub</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker image push &lt;username&gt;/&lt;image-name&gt;:&lt;tag&gt;
+</span></span></code></pre></div><p>Show the history of an image</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker image history &lt;image-name&gt;
+</span></span></code></pre></div><p>Export image into a tar file</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker iamge save &lt;image-name&gt; &gt; &lt;filename&gt;.tar
+</span></span><span style="display:flex;"><span>docker image save &lt;image-name&gt; -o &lt;filename&gt;.tar
+</span></span></code></pre></div><p>Loading an image from a tar file</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker image load &lt; &lt;filename&gt;.tar
+</span></span><span style="display:flex;"><span>docker iamge load -i &lt;filename&gt;.tar
+</span></span><span style="display:flex;"><span>docker image load --input &lt;filename&gt;.tar
+</span></span></code></pre></div><h2 id="container-management">Container Management</h2>
+<p>Display running processes on a container</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker container top &lt;container-name&gt;
+</span></span></code></pre></div><p>Display stats of a docker container</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker container stats &lt;container-name&gt;
+</span></span></code></pre></div><p>To make a container auto restart you can do the following with the flags:</p>
+<ul>
+<li><strong>no:</strong> do not automatically restart the container (default).</li>
+<li><strong>on-failure:</strong> restart the container if exits due to an error.</li>
+<li><strong>always:</strong> always restart the container if it stops.</li>
+<li><strong>unless-stopped:</strong> similar to always, except that when the container is stopped it is not restarted even after the Dcoker daemon restarts.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker container run -d --name &lt;container-name&gt; --restart &lt;flag&gt; &lt;image-name&gt;
+</span></span></code></pre></div><p>To get docker events</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker system events
+</span></span></code></pre></div><h2 id="docker-compose">Docker Compose</h2>
+<p>Create a compose service</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker-compose  up -d
+</span></span></code></pre></div><p>List containers created by docker-compose</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker-compose ps
+</span></span></code></pre></div><p>Stop a compose service</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker-compose stop
+</span></span></code></pre></div><p>Start a compose service</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker-compose start
+</span></span></code></pre></div><p>Delete a compose service</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker-compose down
+</span></span></code></pre></div><p>Example of a docker-compose.yml file</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">version</span>: <span style="color:#e6db74">&#39;3&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">services</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">app-name</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">build</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">context</span>: <span style="color:#ae81ff">.</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">args</span>:
+</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">VERSION=v2.0</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">ports</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;8081:3000&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">environment</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">NODE_ENV=production</span>
+</span></span></code></pre></div><p>Note the following, docker compose has 4 top level keys: version, services, networks and volumes. The version key is mandatory and it&rsquo;s used to define the compose file format. The compose file format is tied to the docker engine version.</p>
+<h1 id="docker-swarm">Docker Swarm</h1>
+<p>Docker Swarm has two major components. The first one is the cluster. This clusters manages one or more Docker nodes. The communication between the nodes is encrypted. The second component is an orchestration engine for creating micro-services.</p>
+<p>List all nodes</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker node ls
+</span></span></code></pre></div><p>Inspecting a node</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker node inspect &lt;node-name&gt;
+</span></span></code></pre></div><p>Promoting a worker to a manager</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker node promote &lt;node-name&gt;
+</span></span></code></pre></div><p>Demoting a manager to a worker</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker node demote &lt;node-name&gt;
+</span></span></code></pre></div><p>Removing a node form the swarm</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker node rm -f &lt;node-name&gt;
+</span></span></code></pre></div><p>Have a node leave the swarm</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker swarm leave
+</span></span></code></pre></div><p>Getting the join token</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker swarm join-token &lt;worker|manager&gt;
+</span></span></code></pre></div><p>Have the node rejoin the swarm</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker swarm join --token &lt;token&gt; &lt;private-ip&gt;:2377
+</span></span></code></pre></div><p>Creating a docker service</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker service create -d --name &lt;service-name&gt; -p &lt;host-port&gt;:&lt;container-port&gt; --replicas &lt;number-of-replicas&gt; &lt;image-name&gt; &lt;cmd&gt;
+</span></span></code></pre></div><p>List all services</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker service ls
+</span></span></code></pre></div><p>Inspecting a service</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker service inspect &lt;service-name&gt;
+</span></span></code></pre></div><p>Getting logs for a service</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker service logs &lt;service-name&gt;
+</span></span></code></pre></div><p>List all tasks of a service</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker service ps &lt;service-name&gt;
+</span></span></code></pre></div><p>Scaling a service up and down</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker service scale &lt;service-name&gt;<span style="color:#f92672">=</span>&lt;replicas-number&gt;
+</span></span></code></pre></div><p>Updating a service</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker service update <span style="color:#f92672">[</span>options<span style="color:#f92672">]</span> &lt;service-name&gt;
+</span></span></code></pre></div><p>Creating a overlay network</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker network create -d overlay &lt;network-name&gt;
+</span></span></code></pre></div><p>Creating a service with an overlay network</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker service create -d --name &lt;service-name&gt; <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    -p &lt;host-port&gt;:&lt;container-port&gt;  <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --replicas &lt;replicas-number&gt; <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    &lt;image-name&gt; &lt;cmd&gt;
+</span></span></code></pre></div><p>Adding a service to a network</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker service update --network-add &lt;network-name&gt; &lt;service&gt;
+</span></span></code></pre></div><p>Removing a service from a network</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker service update --network-rm &lt;network-name&gt; &lt;service-name&gt;
+</span></span></code></pre></div><p>Adding plugins</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker plugin install &lt;plugin-name&gt; <span style="color:#f92672">[</span>options<span style="color:#f92672">]</span>
+</span></span></code></pre></div><p>Listing plugins</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker plugin ls
+</span></span></code></pre></div><p>Disable a plugin</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker plugin disable &lt;plugin-id&gt;
+</span></span></code></pre></div><p>Delete a plugin</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker plugin rm &lt;plugin-id&gt;
+</span></span></code></pre></div><p>To deploy a whole application one could use stacks and docker-compose</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker stack deploy --compose-file docker-compose.yml &lt;stack-name&gt;
+</span></span></code></pre></div><h2 id="docker-security">Docker Security</h2>
+<p>Using a custom seccomp profile</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker contianer run --security-opt seccomp<span style="color:#f92672">=</span>&lt;profile&gt; &lt;image-name&gt; &lt;cmd&gt;
+</span></span></code></pre></div><p>Dropping capabilities (commands) from a container</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker container run --cap-drop<span style="color:#f92672">=</span>&lt;command&gt; &lt;image-name&gt; &lt;cmd&gt;
+</span></span></code></pre></div><p>Limiting CPU and Memory</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker container run -it --cpus<span style="color:#f92672">=</span>&lt;value&gt; --memory<span style="color:#f92672">=</span>&lt;value&gt; &lt;size&gt; --memory-swap &lt;value&gt; &lt;size&gt; &lt;image-name&gt; &lt;cmd&gt;
+</span></span></code></pre></div><h3 id="docker-content-trust">Docker Content Trust</h3>
+<p>Creating a key</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker trust key generate &lt;name&gt;
+</span></span></code></pre></div><p>Importing a key</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker trust key load &lt;pem&gt; --name &lt;name&gt;
+</span></span></code></pre></div><p>Add signer</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker trust signer add --key &lt;pem&gt; &lt;name&gt; &lt;repository&gt;
+</span></span></code></pre></div><p>Remove signer</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker trust signer remove &lt;name&gt; &lt;repository&gt;
+</span></span></code></pre></div><p>Signing an image</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker trust sign &lt;image-name&gt;:&lt;tag&gt;
+</span></span></code></pre></div><h3 id="docker-secrets">Docker secrets</h3>
+<p>Creating a secret using STDIN</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>STDIN | docker secret create &lt;secret-name&gt;
+</span></span></code></pre></div><p>Creating a secret using a file</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker secret create &lt;name&gt; &lt;file&gt;
+</span></span></code></pre></div><p>List secrets</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker secret ls
+</span></span></code></pre></div><p>Inspecting a secret</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker secret inspect &lt;secret-name&gt;
+</span></span></code></pre></div><p>Using a secret</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker service create --name &lt;service-name&gt; --secret &lt;secret-name&gt; &lt;image-name&gt;
+</span></span></code></pre></div><p>Deleting a secret</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker secret rm &lt;secret-name&gt;
+</span></span></code></pre></div></div>
+
+
+    <footer>
+    </footer>
+</body>
+</html>
+

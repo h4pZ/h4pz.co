@@ -5,7 +5,8 @@
     <link>https://www.h4pz.co/</link>
     <description>Recent content on h4pz.co</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://www.h4pz.co/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Sun, 13 Aug 2023 20:39:09 +0200</lastBuildDate><atom:link href="https://www.h4pz.co/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ABOUT</title>
       <link>https://www.h4pz.co/about/</link>
@@ -14,6 +15,24 @@
       <guid>https://www.h4pz.co/about/</guid>
       <description>ABOUT I am an artificial intelligence (deep learning) engineer currently developing end to end solutions and doing research in the computer vision space for the pharma and biotech industry.
 Highly interested in the intersection between AI x Art, the wired and shell ghosts</description>
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>https://www.h4pz.co/blog/docker/</link>
+      <pubDate>Sun, 13 Aug 2023 20:39:09 +0200</pubDate>
+      
+      <guid>https://www.h4pz.co/blog/docker/</guid>
+      <description>&lt;p&gt;This document contains information about what docker is and some basic commands. This contains information that I would liked to read when I was starting figuring out what this tool does. It is primarily targeted to a non-so-technical audience like me who doesn&amp;rsquo;t have a CS background.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Change Default Browser</title>
+      <link>https://www.h4pz.co/blog/change-default-browser/</link>
+      <pubDate>Fri, 11 Aug 2023 22:37:45 +0200</pubDate>
+      
+      <guid>https://www.h4pz.co/blog/change-default-browser/</guid>
+      <description>&lt;p&gt;Change the default web browser in Manjaro bspwm&lt;/p&gt;</description>
     </item>
     
   </channel>

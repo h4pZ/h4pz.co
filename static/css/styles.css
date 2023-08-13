@@ -33,10 +33,10 @@ body {
     margin-right: 8.4px; /* Optional, adds some spacing between articles */
 }
 
-p {
-    font-family: 'IBM Plex Serif', serif;
+p, li {
     color: #f1eaea;
     font-weight: 300;
+    font-size: 16px;
 }
 
 h1 {
@@ -46,11 +46,34 @@ h1 {
     padding-right: 10px;
     text-decoration: none;
     font-size: 20px;
-
+    text-transform: uppercase;
 }
 
+h2 {
+    text-transform: uppercase;
+    color: #5C63DF;
+    font-weight: normal;
+    letter-spacing: 4px;
+    padding-right: 10px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+
+h3 {
+    text-transform: uppercase;
+    color: #82aaed;
+    font-weight: normal;
+    letter-spacing: 4px;
+    padding-right: 10px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+
 .section h2 a {
-    color: #82AAED;
+    text-transform: uppercase;
+    color: #82aaed;
     font-weight: normal;
     letter-spacing: 4px;
     padding-right: 10px;
@@ -73,7 +96,7 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 20px;  /* Adjust padding to your preference */
+    padding: 20px;  /* adjust padding to your preference */
     text-align: left;
 }
 
@@ -95,9 +118,36 @@ h1 {
 
 
 .social-icons li a img {
-    max-width: 18px;  /* Adjust this value to your preference */
-    vertical-align: middle; /* Align the images vertically */
+    max-width: 18px;  /* adjust this value to your preference */
+    vertical-align: middle; /* align the images vertically */
 }
+
+
+.footer-socials {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;  /* remove bullet points */
+}
+.footer-socials li {
+    margin-left: 12px;
+}
+
+.articles, .footer-socials 
+    display: flex;
+    align-items: center;
+    overflow: auto;
+}
+
+
+.footer-socials li a img {
+    width: 10px;  /* adjust this value to your preference */
+    vertical-align: middle; /* align the images vertically */
+}
+
+
+
+
 
 .content-container {
     margin: 0 auto; /* center the div */
@@ -106,3 +156,29 @@ h1 {
     text-align: center;
 }
 
+.blog-entry {
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-bottom: 2%;
+}
+
+
+.content {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.meta-data-container {
+    color: #a6a6a6;
+    font-size: 12px;
+}
+a h2 {
+    color: #82aaed;
+    letter-spacing: 4px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.blog-title {
+    text-decoration: none;
+}
