@@ -14,4 +14,5 @@ I am an artificial intelligence (deep learning) engineer currently developing en
 
 Highly interested in the intersection between AI x Art, the wired and shell ghosts
 
+
 ---

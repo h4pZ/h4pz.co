@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>h4pz.co</title>
-    <link>https://h4pz.co/</link>
+    <link>https://www.h4pz.co/</link>
     <description>Recent content on h4pz.co</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://h4pz.co/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://www.h4pz.co/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ABOUT</title>
-      <link>https://h4pz.co/about/</link>
+      <link>https://www.h4pz.co/about/</link>
       <pubDate>Mon, 24 Jul 2023 21:13:57 +0200</pubDate>
       
-      <guid>https://h4pz.co/about/</guid>
+      <guid>https://www.h4pz.co/about/</guid>
       <description>ABOUT I am an artificial intelligence (deep learning) engineer currently developing end to end solutions and doing research in the computer vision space for the pharma and biotech industry.
 Highly interested in the intersection between AI x Art, the wired and shell ghosts</description>
     </item>
