@@ -212,3 +212,29 @@ a {
 a:hover {
     color: #e6a4fc;
 }
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 100px)); /* This means each grid item will be at least 200px wide and will adjust dynamically */
+    gap: 30px; /* Space between each grid item */
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.project-entry {
+    text-align: center; /* Center the title below the image */
+    transition: all 0.40s ease;
+}
+
+.project-entry:hover {
+    filter: brightness(1.2);
+}
+
+
+.project-thumbnail {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1; /* Makes the image behave as a square. This is a modern CSS feature and may not work in older browsers. */
+    object-fit: cover; /* In case images aren't square, this will cover the space without stretching */
+}
+
