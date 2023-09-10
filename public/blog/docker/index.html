@@ -193,8 +193,8 @@ CMD [ &#34;nginx&#34;, &#34;-g&#34;, &#34;pid /tmp/nginx.pid; daemon off;&#34; ]
 <p><code>CMD:</code> default execution of the container. There can only be one at the end of the dockerfile.</p>
 <p><code>LABEL:</code> adds metadata to an image.</p>
 <p><code>EXPOSE:</code> informs docker that the container listens to the specified network ports at runtime.</p>
-<p><code>ENV:</code> set the environment variable <!-- raw HTML omitted --> to the <!-- raw HTML omitted --></p>
-<p><code>ADD:</code> copies new files, directories, or remote file URLs from <!-- raw HTML omitted --> and adds them to the file-system of the image at the path <!-- raw HTML omitted --></p>
+<p><code>ENV:</code> set the environment variable <key> to the <value></p>
+<p><code>ADD:</code> copies new files, directories, or remote file URLs from <src> and adds them to the file-system of the image at the path <dest></p>
 <p><code>WORKDIR:</code> set the working directory for any <code>RUN</code>, <code>CMD</code>, <code>ENTRYPOINT</code>, <code>COPY</code> and <code>ADD</code> instructions that follow it in the Dockerfile.</p>
 <p><code>ARG:</code> Defines a variable that users can pass at build-time to the builder with the docker <code>build</code> command using the <code>--build-arg &lt;varname&gt;=&lt;value</code> flag.</p>
 <p><code>ONBUILD:</code> Adds a trigger instruction to the image that executes when the image is used as the base for another build.</p>

@@ -215,8 +215,9 @@ a:hover {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 100px)); /* This means each grid item will be at least 200px wide and will adjust dynamically */
+    grid-template-columns: repeat(3, minmax(17vw, 100px)); /* This means each grid item will be at least 200px wide and will adjust dynamically */
     gap: 30px; /* Space between each grid item */
+    justify-content: center; /* Center the grid items */
     padding-left: 15%;
     padding-right: 15%;
 }
