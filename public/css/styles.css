@@ -238,4 +238,24 @@ a:hover {
     aspect-ratio: 1 / 1; /* Makes the image behave as a square. This is a modern CSS feature and may not work in older browsers. */
     object-fit: cover; /* In case images aren't square, this will cover the space without stretching */
 }
+/* Tablet styles */
+@media (max-width: 1024px) {
+    .row {
+        flex-direction: column;
+    }
 
+    .column:first-child {
+        flex: 0.25;
+    }
+
+    .column:last-child {
+        flex: 0.75;
+    }
+
+    .column #rightinfo {
+        display: flex;
+        flex-direction: column; /* To keep the content vertically stacked */
+        align-items: center; /* This will horizontally center the child items */
+        justify-content: center; /* This will vertically center the child items */
+    }
+}
