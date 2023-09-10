@@ -140,7 +140,7 @@ h3 {
     margin-left: 12px;
 }
 
-.articles, .footer-socials 
+.articles, .footer-socials {
     display: flex;
     align-items: center;
     overflow: auto;

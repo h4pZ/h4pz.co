@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-    {{ partial "head.html" . }}
-</head>
-<body>
-    {{ partial "nav.html" . }}
+{{ define "main" }}
     <div class="content-container">
         <header>
         </header>
@@ -12,5 +6,5 @@
             {{ .Content }}
         </main>
     </div>
-</body>
-</html>
+{{ end }}
+
