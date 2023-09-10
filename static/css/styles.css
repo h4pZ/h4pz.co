@@ -213,13 +213,6 @@ a:hover {
     color: #e6a4fc;
 }
 
-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 100%;
-}
-
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 100px)); /* This means each grid item will be at least 200px wide and will adjust dynamically */
