@@ -6,8 +6,12 @@ draft: true
 Expectation maximization as described by Bishop (2006) is:
 
 `a general technique for finding maximum likelihood solutions for probabilistic models having latent variables`
+<!--more-->
 
 What this means is that there exists a data generator process to which we can only collect (or it was only collected) part of the data $X$ associated with it, instead of the full data $X, Z$. Usually a model is constructed around the marginalized maximum likelihood estimator:
+
+
+
 
 $$\underset{\theta}{\mathrm{argmax}} \text{ } P\left(X | \theta\right) = \underset{\theta}{\mathrm{argmax}} \int P\left(X, Z | \theta\right) dZ$$
 
@@ -89,3 +93,218 @@ Notes
 There is no guarantee that the EM algorithm will end up in a local maximum.
 
 The proof that maximizing the expected log-likelihood of the complete data also improves the log-likelihood of the data given the model parameters can be found in Wikipedia (TLDR: the expected log-likelihood of the complete data is a lower bound of the log-likelihood of the observed data)
+
+![fitting image](/images/blog/em-algo/fitting.gif)
+
+```python
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+plt.style.use('dark_background')
+
+# Parameters for the simulation.
+seed = 4
+np.random.seed(seed)
+K = 3
+D = 10
+N = 10000
+max_it = 100
+min_change = 0.1
+
+# Model parameters.
+true_pi = np.array([[0.1, 0.6, 0.3]])
+true_mu = np.random.uniform(size=(K, D))
+X = np.zeros(shape=(N, D))
+
+# Populating the data.
+for n in range(N):
+    k = np.random.choice(3, p=true_pi[0])
+    X[n, ] = np.random.binomial(n=1 , p=true_mu[k, ])
+
+
+# Defining a class for the EM algorithm.
+class EMMBernoulli:
+
+    def __init__(self, max_it, min_change, verbose=True):
+        """A Class that will hold information related with a expectation
+        maximization algorithm when assuming a mixture of multivariate
+        bernoulli distributions as the data generator process.
+        
+        Parameters
+        ----------
+        max_it : int
+            Number of maximum iterations to run the simulation.
+        min_change : float
+            Minimum change of the log likelihood per iteration to continue
+            the fitting process.
+        verbose : float, default True
+            Whether to print or not information about the training.
+        
+        """ 
+        # Attributes.
+        self.X = None
+        self.max_it = max_it
+        self.min_change = min_change
+        self.N = None
+        self.D = None
+        self.verbose = verbose
+        self.K = None
+        self.pi = None
+        self.mu = None
+        self.llik = None
+
+
+    def fit(self, X, K=3):
+        """Fit the desired data X with a mixture of K 
+        multivariate bernoulli distributions using the
+        Expected Maximization Algorithm.
+        
+        Parameters
+        ----------
+        X : np.array
+            Numpy array that will hold the data, it must be filled with ones
+            or zeroes.
+        K : int
+            Number of multivariate bernoulli distributions.
+            
+        Return
+        ------
+        None
+        
+        """
+        # Number of multivariate bernoulli distributions.
+        self.X = X
+        self.N = X.shape[0]
+        self.D = X.shape[1]
+        self.K = K
+        self.llik = []
+
+        # Populating randomly the parameters to estimate.
+        self.pi = np.array([[1 / K for k in range(self.K)]])
+        self.mu = np.random.uniform(size=(self.K, self.D))
+
+        # Training loop.
+        for i in range(self.N):
+            ####################
+            # Expectation step #
+            ####################
+
+            # The p_x_mu is a matrix of dim (N, K).
+            # This matrix contains the probability of
+            # the observation X_{n, k} given mu_{k}
+            # P(X_{n, k} | mu_{k}).
+            p_x_mu = np.exp(self.X @ np.log(self.mu.T) +
+                            (1 - self.X) @ np.log(1 - self.mu.T))
+
+            # Calculating the posterior P(Z | X, mu, pi).
+            # This matrix is going to be the same shape / dim as p_x_mu.
+            # the numerator is equal to:
+            # \pi_{k} * p(X_n | \mu_k)
+            # The denominator is equal to:
+            # \sum_k \pi_{k} * p(X_n | \mu_k).
+            numerator_pos = p_x_mu * self.pi
+            denominator_pos = np.sum(numerator_pos, axis=1, keepdims=True)
+            posterior = numerator_pos / denominator_pos
+
+            ##############################
+            # Log likelihood computation #
+            ##############################
+            self.llik.append(np.sum(np.log(denominator_pos)))
+
+            # Stopping condition for the fitting.
+            if len(self.llik) > 1:
+                delta = self.llik[-1] - self.llik[-2]
+
+                if delta <= self.min_change:
+                    return None
+
+            # Printing the results.
+            if self.verbose:
+                print(f'Iteration: {i :4d} | Log likelihood: {self.llik[i] : 07.5f}')
+
+            #####################
+            # Maximization step #
+            #####################
+
+            # Getting the parameters such that
+            # it maximizes the current Q(parameters).
+            # Getting pi(t).
+            numerator_pi = np.sum(posterior, axis=0, keepdims=True)
+            self.pi =  numerator_pi / self.N
+
+            # Getting mu(t).
+            self.mu = (posterior.T @ self.X) / numerator_pi.T
+
+
+    def plot(self, true_mu, true_pi):
+        """Plot the results of the fitting procedure.
+        
+        Parameters
+        ----------
+        true_mu : np.array
+            Numpy array containing the true values for mu.
+        true_pi : np.array
+            Numpy array containing the true values for pi.
+            
+        """
+        # Verifying that the model has been fitted.
+        assert self.K is not None, "The model hasn't being fitted"
+
+        # Plotting the results.
+        fig, axs = plt.subplots(2, 2, figsize=(14, 12))
+
+        # Plotting the mu's.
+        axs[0, 0].set_title("True mu's")
+        axs[0, 1].set_title("Fitted mu's")
+        axs[1, 0].set_title("True and fitted pi's")
+        axs[1, 0].set_xticks(range(2))
+        axs[1, 0].set_xticklabels(("True", "Fitted"))
+        axs[1, 1].set_title("Log likelihood")
+        axs[1, 1].set_xlabel("Iteration")
+
+        for i in range(self.K):
+            # Calculating the bottom for the stacked bar plot.
+            if i == 0:
+                true_bottom = 0
+                fitted_bottom = 0
+                pi_bottom = 0
+            else:
+                true_bottom = np.sum(true_mu[0:i, ], axis=0)
+                fitted_bottom = np.sum(self.mu[0:i, ], axis=0)
+                pi_bottom = [np.sum(true_pi[0, :i]), np.sum(self.pi[0, :i])]
+
+            color = plt.cm.viridis((i + 1) / self.K)
+
+            axs[0, 0].bar(range(self.D),
+                          true_mu[i, ], 
+                          bottom=true_bottom, 
+                          color=color)
+            axs[0, 1].bar(range(self.D), 
+                          self.mu[i, ], 
+                          bottom=fitted_bottom, 
+                          color=color)
+            axs[1, 0].bar(range(2),
+                          [true_pi[0, i], self.pi[0, i]],
+                          bottom=pi_bottom,
+                          color=color)
+
+        axs[1, 1].plot(range(len(self.llik)), self.llik)
+
+        plt.show()
+
+
+def main():
+    model = EMMBernoulli(X, max_it, min_change)
+    model.fit(X, K=3)
+
+    model.plot(true_mu, true_pi)
+    
+if __name__ == "__main__":
+    main()
+```
+
+
+# references
+
+ 1. Christopher M. Bishop. 2006. Pattern Recognition and Machine Learning (Information Science and Statistics). Springer-Verlag, Berlin, Heidelberg.

@@ -1,19 +1,14 @@
 {{ define "main" }}
-<ul>
-     {{ range .Pages }}
-          <div class="blog-entry">
-               <div>
-                    <a class="blog-title" href="{{ .RelPermalink }}"><h2>{{ .Title }}</h2></a>
-               </div>
-               <div class="meta-data-container">{{ dateFormat "Monday, Jan 2, 2006" .Date }}</div>
-               <div class="meta-data-container">{{ if .Params.tags }}<strong>Tags:</strong> {{range .Params.tags}}<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div>
-               <div class="meta-data-container">{{ if .Params.categories }}<strong>Categories:</strong> {{range .Params.categories}}<a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div>
-               <div class="meta-data-container">{{ if .Params.moods }}<strong>Moods:</strong> {{range .Params.moods}}<a href="{{ "/moods/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div>
-
-               <p>{{.Summary}}</p>
-
-          </div>
-     {{ end }}
-
-</ul>
+<div class="projects-grid">
+    {{ range .Pages }}
+        <div class="project-entry">
+            <a href="{{ .RelPermalink }}">
+                <img src="{{ .Params.thumbnail }}" alt="{{ .Title }} Thumbnail" class="project-thumbnail">
+                <h2>{{ .Title }}</h2>
+            </a>
+            <!-- ... other meta data divs ... -->
+        </div>
+    {{ end }}
+</div>
 {{ end }}
+
