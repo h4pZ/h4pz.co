@@ -1,7 +1,7 @@
 ---
 title: "Painting With Neural Networks"
 date: 2023-09-10T19:25:34+02:00
-draft: true
+draft: false
 thumbnail: "/images/projects/painting-with-neural-networks/metalhead.jpg"
 ---
 

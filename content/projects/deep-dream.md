@@ -1,7 +1,7 @@
 ---
 title: "Deep Dream"
 date: 2023-09-10T19:37:25+02:00
-draft: true
+draft: false
 thumbnail: "/images/projects/deep-dream/stylenet-c.gif"
 ---
 The objective of this project/course work for CADL was to explore two styling techniques using deep learning. The first one is related with guided dreams/hallucinations, leveraging on the original idea of Inceptionism. The second one is based on style transfer. Both of these ideas were executed using the pre-trained network Inception (v5) of Google and using two paintings by Kim-Byngkwan and one picture done by Carol Pinzon. The subjects for this experiment are presented below.

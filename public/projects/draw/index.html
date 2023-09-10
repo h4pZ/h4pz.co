@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/styles.css">
+<link rel="stylesheet" href="../../css/navbar.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200&family=IBM+Plex+Serif:wght@200&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&family=IBM+Plex+Serif:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400&family=IBM+Plex+Serif:wght@400&display=swap" rel="stylesheet">
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      processEscapes: true
+    }
+  });
+</script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+    <div class="articles">
+        <article class="section">
+            <h2><a href="../../" >H4PZ</a></h2>
+        </article>
+        <article class="section">
+            <h2><a href="../../projects" >PROJECTS</a></h2>
+        </article>
+        <article class="section">
+            <h2><a href="../../blog" >BLOG</a></h2>
+        </article>
+        <article class="section">
+            <h2><a href="../../about" >ABOUT</a></h2>
+        </article>
+    </div>
+</nav>
+
+
+    </header>
+    
+    
+<div class="content"><h3>Draw</h3></div>
+<div class="content"><p>Draw is a model that recreates the mechanism of attention done by humans. This model has T time steps (defined by the user) over which the recurrent neural network will recreate the original image step by step. Letting the network decide which patches of the image is going to draw first in a blank canvas. I used this model over a single image instead of over a whole data set, because I wanted to see how the model which is intended to work with MNIST, or CIFAR would work over one picture. I trained the DRAW network with two images, the first one which I found randomly on archillet project and the other one which is done by Laura Makabresku (NSFW warning for the LM webpage).</p>
+<p>Note: I used only a single channel for the DRAW model on the random glitch image.</p>
+<p><img src="../../images/projects/draw/glitch.jpg" alt="img">
+<img src="../../images/projects/draw/raven.jpg" alt="img">
+<img src="../../images/projects/draw/DKdNSxFXUAA2wEf.gif" alt="img">
+<img src="../../images/projects/draw/smallraven_1096000.gif" alt="img"></p>
+<h1 id="bonus-gifs">Bonus gifs</h1>
+<p>The following gifs corresponds to different stages of the training of the raven picture.</p>
+<p><img src="../../images/projects/draw/asdasd.gif" alt="img">
+<img src="../../images/projects/draw/smallraven_554000.gif" alt="img">
+<img src="../../images/projects/draw/smallraven_600000.gif" alt="img">
+<img src="../../images/projects/draw/smallraven_1096000.gif" alt="img"></p>
+</div>
+
+
+    <footer>
+    </footer>
+</body>
+</html>
+

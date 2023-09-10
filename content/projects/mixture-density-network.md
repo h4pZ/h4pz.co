@@ -1,7 +1,7 @@
 ---
 title: "Mixture Density Network"
 date: 2023-09-10T20:26:47+02:00
-draft: true
+draft: false
 thumbnail: "/images/projects/mdn/henr.jpg"
 ---
 

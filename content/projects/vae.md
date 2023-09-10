@@ -1,7 +1,7 @@
 ---
 title: "Variational Autoencoder"
 date: 2023-09-10T20:50:45+02:00
-draft: true
+draft: false
 thumbnail: "/images/projects/vae/cvae_interpolation.gif"
 ---
 WIP

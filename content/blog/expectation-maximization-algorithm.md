@@ -1,7 +1,7 @@
 ---
 title: "Expectation Maximization Algorithm"
 date: 2023-09-10T18:47:56+02:00
-draft: true
+draft: false
 ---
 Expectation maximization as described by Bishop (2006) is:
 

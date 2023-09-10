@@ -1,7 +1,7 @@
 ---
 title: "Image to Image translation"
 date: 2023-09-10T20:38:20+02:00
-draft: true
+draft: false
 thumbnail: "/images/projects/img2img/sculpt.png"
 ---
 

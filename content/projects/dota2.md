@@ -1,7 +1,7 @@
 ---
 title: "Dota2"
 date: 2023-09-10T20:53:50+02:00
-draft: true
+draft: false
 thumbnail: "/images/projects/dota2/glitch_dota_2_logo.jpg"
 ---
 

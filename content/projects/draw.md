@@ -1,7 +1,7 @@
 ---
 title: "Draw"
 date: 2023-09-10T20:16:03+02:00
-draft: true
+draft: false
 thumbnail: "/images/projects/draw/DKdNSxFXUAA2wEf.gif"
 ---
 
