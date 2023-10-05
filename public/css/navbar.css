@@ -1,3 +1,5 @@
+@import url("colors.css");
+
 .articles {
     display: flex;
     flex-wrap: wrap;
@@ -6,21 +8,18 @@
     overflow: hidden; 
 }
 
-
-
-#navbar h2 a {
-    color: #a6a6a6;
+#navbar p a {
+    color: var(--socials-color);
     transition: color 0.3s;
 }
 
-#navbar h2 a.current {
-    color: #82AAED;
+#navbar p a.current {
+    color: var(--primary-color)
 }
 
-#navbar h2 a:hover {
-    color: #5C63DF; !important;
+#navbar p a:hover {
+    color: var(--secondary-color); !important;
 }
-
 
 #navbar {
     padding: 40px;

@@ -1,8 +1,13 @@
+@import url("colors.css");
+
 body {
-    background-color: #121217;
+    background-color: var(--background-color);
     font-family: 'IBM Plex Sans', sans;
 }
 
+/* 
+MAIN SITE
+*/
 .row {
     display: flex;
     justify-content: space-between;
@@ -33,25 +38,9 @@ body {
     margin-right: 8.4px;
 }
 
-p, li {
-    color: #f1eaea;
-    font-weight: 300;
-    font-size: 16px;
-}
-
-h1 {
-    color: #82AAED;
-    font-weight: normal;
-    letter-spacing: 4px;
-    padding-right: 10px;
-    text-decoration: none;
-    font-size: 20px;
+#main-nav-bar-item {
     text-transform: uppercase;
-}
-
-h2 {
-    text-transform: uppercase;
-    color: #5C63DF;
+    color: var(--secondary-color);
     font-weight: normal;
     letter-spacing: 4px;
     padding-right: 10px;
@@ -59,21 +48,9 @@ h2 {
     font-size: 16px;
 }
 
-
-h3 {
+.section p a {
     text-transform: uppercase;
-    color: #82aaed;
-    font-weight: normal;
-    letter-spacing: 4px;
-    padding-right: 10px;
-    text-decoration: none;
-    font-size: 20px;
-}
-
-
-.section h2 a {
-    text-transform: uppercase;
-    color: #82aaed;
+    color: var(--primary-color);
     font-weight: normal;
     letter-spacing: 4px;
     padding-right: 10px;
@@ -82,14 +59,14 @@ h3 {
     transition: color 0.3s;
 }
 
-.section h2 a:hover {
-    color: #5C63DF; !important;
+.section p a:hover {
+    color: var(--secondary-color); !important;
 
 }
 
 
 .socials {
-    color: #a6a6a6;
+    color: var(--socials-color);
     letter-spacing: 8px;
 }
 
@@ -152,8 +129,69 @@ h3 {
     vertical-align: middle;
 }
 
+/*
+DEFAULT TAGS
+*/
+
+p, li {
+    color: var(--default-text-color);
+    font-weight: 300;
+    font-size: 16px;
+}
+
+h1 {
+    color: var(--primary-color);
+    font-weight: normal;
+    letter-spacing: 4px;
+    padding-right: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    text-transform: uppercase;
+}
 
 
+h2 {
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    font-weight: normal;
+    letter-spacing: 4px;
+    padding-right: 10px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+h3 {
+    text-transform: uppercase;
+    color: var(--primary-color);
+    font-weight: normal;
+    letter-spacing: 4px;
+    padding-right: 10px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+
+a p {
+    color: var(--primary-color);
+    letter-spacing: 4px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+a {
+    color: var(--link-color);
+    transition: color 0.3s;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--link-hover-color);
+}
+
+
+/* 
+BASIC CONTAINER FOR EXAMPLE FOR THE ABOUT ME SECTION
+*/
 
 
 .content-container {
@@ -163,6 +201,9 @@ h3 {
     text-align: center;
 }
 
+/*
+BLOG ENTRY CONTENT FOR THE LISTS OF BLOGS
+*/
 .blog-entry {
     padding-left: 15%;
     padding-right: 15%;
@@ -170,32 +211,36 @@ h3 {
 }
 
 
+/*
+CONTENT FROM THE MARKDOWN FILES
+*/
 .content {
     padding-left: 10%;
     padding-right: 10%;
 }
 
+/*
+METADATA CONTAINER FOR THE INFO LIKE DATE AND TAGS FOR THE BLOG LIST
+*/
 .meta-data-container {
-    color: #a6a6a6;
+    color: var(--socials-color);
     font-size: 12px;
 }
-a h2 {
-    color: #82aaed;
-    letter-spacing: 4px;
-    font-size: 18px;
-    text-transform: uppercase;
-}
 
+
+/*
+SINGLE BLOG ENTRY STUFF
+*/
 .blog-title {
     text-decoration: none;
 }
 
-.blog-title h2 {
+.blog-title p {
     transition: color 0.3s;
 }
 
-.blog-title:hover h2 {
-    color: #5C63DF; !important;
+.blog-title:hover p {
+    color: var(--secondary-color); !important;
 }
 
 
@@ -203,16 +248,9 @@ footer {
     padding: 3%;
 }
 
-a {
-    color: #b2a4fc;
-    transition: color 0.3s;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #e6a4fc;
-}
-
+/*
+PROJECTS GRID FOR THE LIST OF PROJECTS
+*/
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(17vw, 100px)); /* This means each grid item will be at least 200px wide and will adjust dynamically */
@@ -238,7 +276,10 @@ a:hover {
     aspect-ratio: 1 / 1; /* Makes the image behave as a square. This is a modern CSS feature and may not work in older browsers. */
     object-fit: cover; /* In case images aren't square, this will cover the space without stretching */
 }
-/* Tablet styles */
+
+/* 
+MEDIA QUERY: FOR THE TABLET
+*/
 @media (max-width: 1024px) {
     .row {
         flex-direction: column;
