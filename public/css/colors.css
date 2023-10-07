@@ -1,10 +1,10 @@
 :root {
     --background-color: #121217;
-    --default-text-color: #f1eaea;
+    --default-text-color: #f3f3f2;
     --primary-color: #82AAED;
-    --secondary-color: #5C63DF;
-    --tertiary-color: #f5c2e7;
+    --secondary-color: #7E79C4;
+    --tertiary-color: #9e8b8e;
     --socials-color: #a6a6a6;
-    --link-color: #b2a4fc;
-    --link-hover-color: #e6a4fc;
+    --link-color: #e6a4fc;
+    --link-hover-color: #b2a4fc;
 }

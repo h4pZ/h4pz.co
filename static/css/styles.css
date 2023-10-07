@@ -30,10 +30,6 @@ MAIN SITE
     border: 0;
 }
 
-.articles {
-    display: flex;
-    overflow: auto;
-}
 .section {
     margin-right: 8.4px;
 }
@@ -59,6 +55,7 @@ MAIN SITE
     transition: color 0.3s;
 }
 
+oi
 .section p a:hover {
     color: var(--secondary-color); !important;
 

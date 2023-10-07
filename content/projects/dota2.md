@@ -23,7 +23,7 @@ In this section the two methods used to developed this project are going to be b
 
 The Naive Bayes Classifier is a machine learning model that uses the Bayes Rule to classify observations. The setting of the classifier is as follows: $C$ is a set of possible classes, $V$ is a set of possible words, $P(c)$ is the probabilities that specify how likely it is for a document to belong to class $c$ and $p(w|c)$ contains the probabilities that specify how likely it is for a document to contain the word $w$, given that the document belongs to class $c$ (one probability for each class-word pair). The classifier assigns a class $c$ to the word $w$ following this rule:
 
-$$\hat{C} = argmax_{c \in C} P(c) \prod_{w\in V} P(w|c)^{\#(w)}$$
+$$\hat{C} = argmax_{c \in C} P(c) \prod_{w\in V} P(w|c)^{\(w)}$$
 
 ## latent dirichlet allocation
 
@@ -52,7 +52,7 @@ Figure 2: Graphical model representation of the variational distribution used to
 
 
 # Data 
-The data used in this project comes from a kaggle dataset [6] which was collected and uploaded by GOSU.AI, a company that works on developing AI assistants for online competitive games. The dataset consists of four entries: a game match index, the in-game time stamp, the player slot (0-9) and a the text messagesent by that player. The dataset contains 21.659.448 unique text chats. The amount of messages per match is mostly concentrated under the 250 unique chat messages as shown in Figure 3. The messages are uniformly distributed over the 10 players of each game as seen in Figure 4. Also messages are usually around 20 characters or less as seen in Figure 5. The messages over time have a unique behaviour, there is a spike of activity in the early game when the game is starting and the players are choosing their heroes. After that, a rapid fall of the number of messages its seen and then it increases again as the game progresses and decreases rapidly to zero as seen in Figure 6.
+The data used in this project comes from a kaggle dataset [6] which was collected and uploaded by GOSU.AI, a company that works on developing AI assistants for online competitive games. The dataset consists of four entries: a game match index, the in-game time stamp, the player slot (0-9) and the text message sent by that player. The dataset contains 21.659.448 unique text chats. The amount of messages per match is mostly concentrated under the 250 unique chat messages as shown in Figure 3. The messages are uniformly distributed over the 10 players of each game as seen in Figure 4. Also messages are usually around 20 characters or less as seen in Figure 5. The messages over time have a unique behaviour, there is a spike of activity in the early game when the game is starting and the players are choosing their heroes. After that, a rapid fall of the number of messages its seen and then it increases again as the game progresses and decreases rapidly to zero as seen in Figure 6.
 
 
 ## Preprocessing
@@ -82,7 +82,7 @@ For each of the stages datasets (early, mid, late) a LDA model was trained using
 
 Once each model is trained, a toxicity score is given to each one of the stages. The score is calculated the following way. First, each model has a set of $K$ topics (notice that each model might have a different number of topics selected by the grid-search procedure), and the topics are related with all the words in the vocabulary in the LDA model through the variational parameter $\varphi$. This variational parameter is saved under the components_ attribute of the scikit-learn model and is a $K \times N$ matrix. Each word is assigned a toxic value $t(w)=P(toxic | w)$ which is the probability of a word being toxic. This toxic value is obtained using the PerspectiveAPI 6 which is an application built by Jigsaw and Google that can assign the probability of a piece of text being toxic. Since each word has a different distribution depending on the topic, the variational parameter $\varphi$ is normalized as suggested in the scikit-learn documentation and used as a distribution over the words for each topic. This normalized parameter ${\bar{\varphi}}_{ij}$ is the probability of the word $i$ appearing in the topic $j$. Thus, a topic toxic score is defined as:
 
-$$\text{Topic Toxic Score}_j = \sum_n^N t(w^n){\bar{\varphi}}_{nj}$$
+$$\text{Topic Toxic Score}_j = \sum_n^N t(w^n) {\bar{\varphi}}_{nj}$$
 
 Due to the sheer amount of words that each corpus for each stage can have (above 77.000 words) and the limitations that the PerspectiveAPI has in place for its API calls, only the top 10 words $\mathcal{W}$ are taken into account in the calculation of the topic toxic score. The ranking of the words is done with respect to ${\bar{\varphi}}_{ij}$, so the higher the value the higher ranking it will have. Thus, the actual formula used in the calculations is:
 
