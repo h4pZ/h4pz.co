@@ -12,7 +12,7 @@ type: "about"
 
 deep learning engineer
 
-ai the wired and shell ghosts
+ai, the wired and shell ghosts
 
 
 ---
