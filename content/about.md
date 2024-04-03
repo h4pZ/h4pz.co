@@ -10,9 +10,9 @@ type: "about"
 
 # ABOUT
 
-I am an artificial intelligence (deep learning) engineer currently developing end to end solutions and doing research in the computer vision space for the pharma and biotech industry.
+deep learning engineer
 
-Highly interested in the intersection between AI x Art, the wired and shell ghosts
+ai the wired and shell ghosts
 
 
 ---
