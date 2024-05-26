@@ -193,7 +193,7 @@ BASIC CONTAINER FOR EXAMPLE FOR THE ABOUT ME SECTION
 
 .content-container {
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 0px;
     max-width: 800px;
     text-align: center;
 }
@@ -202,8 +202,8 @@ BASIC CONTAINER FOR EXAMPLE FOR THE ABOUT ME SECTION
 BLOG ENTRY CONTENT FOR THE LISTS OF BLOGS
 */
 .blog-entry {
-    padding-left: 15%;
-    padding-right: 15%;
+    margin-left: 30%;
+    margin-right: 30%;
     padding-bottom: 2%;
 }
 
@@ -212,8 +212,8 @@ BLOG ENTRY CONTENT FOR THE LISTS OF BLOGS
 CONTENT FROM THE MARKDOWN FILES
 */
 .content {
-    padding-left: 10%;
-    padding-right: 10%;
+    margin-left: 30%;
+    margin-right: 30%;
 }
 
 /*
