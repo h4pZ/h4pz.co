@@ -5,6 +5,10 @@ body {
     font-family: 'IBM Plex Sans', sans;
 }
 
+ul {
+    padding: 0;
+}
+
 /* 
 MAIN SITE
 */
@@ -55,7 +59,6 @@ MAIN SITE
     transition: color 0.3s;
 }
 
-oi
 .section p a:hover {
     color: var(--secondary-color); !important;
 
@@ -171,7 +174,7 @@ h3 {
 a p {
     color: var(--primary-color);
     letter-spacing: 4px;
-    font-size: 18px;
+    font-size: 20px;
     text-transform: uppercase;
 }
 
@@ -189,8 +192,6 @@ a:hover {
 /* 
 BASIC CONTAINER FOR EXAMPLE FOR THE ABOUT ME SECTION
 */
-
-
 .content-container {
     margin: 0 auto;
     padding: 0 0px;
@@ -221,7 +222,7 @@ METADATA CONTAINER FOR THE INFO LIKE DATE AND TAGS FOR THE BLOG LIST
 */
 .meta-data-container {
     color: var(--socials-color);
-    font-size: 12px;
+    font-size: 16px;
 }
 
 

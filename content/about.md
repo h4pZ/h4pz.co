@@ -10,8 +10,6 @@ type: "about"
 
 # ABOUT
 
-deep learning engineer
-
 ai, the wired and shell ghosts
 
 
