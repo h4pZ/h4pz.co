@@ -59,9 +59,7 @@ MAIN SITE
 }
 
 .section p a:hover {
-  color: var(--secondary-color);
-  !important;
-
+  color: var(--secondary-color); !important;
 }
 
 

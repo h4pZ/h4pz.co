@@ -8,9 +8,6 @@ type: "about"
 
 ---
 
-# ABOUT
-
 ai, the wired and shell ghosts
-
 
 ---
