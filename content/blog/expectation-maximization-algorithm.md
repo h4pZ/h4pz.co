@@ -3,15 +3,11 @@ title: "Expectation Maximization Algorithm"
 date: 2023-09-10T18:47:56+02:00
 draft: false
 ---
-Expectation maximization as described by Bishop (2006) is:
 
-`a general technique for finding maximum likelihood solutions for probabilistic models having latent variables`
+An expectation maximization exmaple
 <!--more-->
 
 What this means is that there exists a data generator process to which we can only collect (or it was only collected) part of the data $X$ associated with it, instead of the full data $X, Z$. Usually a model is constructed around the marginalized maximum likelihood estimator:
-
-
-
 
 $$\underset{\theta}{\mathrm{argmax}} \text{ } P\left(X | \theta\right) = \underset{\theta}{\mathrm{argmax}} \int P\left(X, Z | \theta\right) dZ$$
 

@@ -5,7 +5,7 @@ draft: false
 ---
 
 
-[Weights and Biases][0] (WandB) is an experiment tracking, model optimization and dataset versioning tool. The cool thing about it is that the runs are stored on their cloud automatically. So, if you are training on a remote server, you just setup a few lines of code in your experiment and then you don't have to worry about getting back the results out of the instance before shutting it down. 
+How to use weights and biases with optuna
 <!--more-->
 
 

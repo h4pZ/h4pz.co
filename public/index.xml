@@ -69,14 +69,14 @@
       <link>https://www.h4pz.co/blog/expectation-maximization-algorithm/</link>
       <pubDate>Sun, 10 Sep 2023 18:47:56 +0200</pubDate>
       <guid>https://www.h4pz.co/blog/expectation-maximization-algorithm/</guid>
-      <description>&lt;p&gt;Expectation maximization as described by Bishop (2006) is:&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;a general technique for finding maximum likelihood solutions for probabilistic models having latent variables&lt;/code&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;An expectation maximization exmaple&lt;/p&gt;</description>
     </item>
     <item>
       <title>Optuna and Wandb</title>
       <link>https://www.h4pz.co/blog/optuna-and-wandb/</link>
       <pubDate>Sun, 13 Aug 2023 21:33:50 +0200</pubDate>
       <guid>https://www.h4pz.co/blog/optuna-and-wandb/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://www.wandb.com/&#34;&gt;Weights and Biases&lt;/a&gt; (WandB) is an experiment tracking, model optimization and dataset versioning tool. The cool thing about it is that the runs are stored on their cloud automatically. So, if you are training on a remote server, you just setup a few lines of code in your experiment and then you don&amp;rsquo;t have to worry about getting back the results out of the instance before shutting it down.&lt;/p&gt;</description>
+      <description>&lt;p&gt;How to use weights and biases with optuna&lt;/p&gt;</description>
     </item>
     <item>
       <title>Docker</title>

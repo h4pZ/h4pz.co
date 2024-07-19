@@ -33,16 +33,12 @@ MAIN SITE
   border: 0;
 }
 
-.section {
-  margin-right: 8.4px;
-}
 
 #main-nav-bar-item {
   text-transform: uppercase;
   color: var(--secondary-color);
   font-weight: 700;
   letter-spacing: 4px;
-  padding-right: 10px;
   text-decoration: none;
   font-size: 16px;
 }
@@ -52,10 +48,9 @@ MAIN SITE
   color: var(--primary-color);
   font-weight: 700;
   letter-spacing: 4px;
-  padding-right: 10px;
+  padding: 10px;
   text-decoration: none;
   font-size: 14px;
-  transition: color 0.3s;
 }
 
 .section p a:hover {
@@ -144,7 +139,6 @@ li {
 h1 {
   color: var(--primary-color);
   letter-spacing: 4px;
-  padding-right: 10px;
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -154,7 +148,6 @@ h2 {
   text-transform: uppercase;
   color: var(--secondary-color);
   letter-spacing: 4px;
-  padding-right: 10px;
   text-decoration: none;
 }
 
@@ -162,7 +155,6 @@ h3 {
   text-transform: uppercase;
   color: var(--primary-color);
   letter-spacing: 4px;
-  padding-right: 10px;
   text-decoration: none;
 }
 
@@ -189,6 +181,16 @@ a:hover {
 /*
 * BLOG
 */
+.entry-title {
+  color: var(--primary-color);
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.entry-title p {
+  text-decoration: underline; 
+}
+
 .blog-card {
   transition: background-color 0.5s;
   padding: 10px; /* Add padding to make the container a bit bigger */
@@ -234,8 +236,6 @@ METADATA CONTAINER FOR THE INFO LIKE DATE AND TAGS FOR THE BLOG LIST
     grid-template-columns: repeat(3, minmax(17vw, 100px)); /* This means each grid item will be at least 200px wide and will adjust dynamically */
     gap: 30px; /* Space between each grid item */
     justify-content: center; /* Center the grid items */
-    padding-left: 15%;
-    padding-right: 15%;
 }
 
 .project-entry {
@@ -244,7 +244,7 @@ METADATA CONTAINER FOR THE INFO LIKE DATE AND TAGS FOR THE BLOG LIST
 }
 
 .project-entry:hover {
-    filter: brightness(1.2);
+    filter: brightness(1.5);
 }
 .project-thumbnail {
     width: 100%;
