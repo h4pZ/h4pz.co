@@ -197,8 +197,6 @@ a:hover {
   padding: 0;
 }
 
-
-
 /* 
 * ABOUT ME CONTAINER
 */
@@ -210,28 +208,20 @@ a:hover {
 }
 
 /*
-BLOG ENTRY CONTENT FOR THE LISTS OF BLOGS
-*/
-/*.blog-entry {*/
-/*    margin-left: 30%;*/
-/*    margin-right: 30%;*/
-/*    padding-bottom: 2%;*/
-/*}*/
-/*
 CONTENT FROM THE MARKDOWN FILES
 */
 .content {
-    margin-left: 30%;
-    margin-right: 30%;
+    margin-left: 20%;
+    margin-right: 20%;
 }
-/**/
-/*METADATA CONTAINER FOR THE INFO LIKE DATE AND TAGS FOR THE BLOG LIST*/
-/**/
+/*
+METADATA CONTAINER FOR THE INFO LIKE DATE AND TAGS FOR THE BLOG LIST
 */
-/*.meta-data-container {*/
-/*    color: var(--socials-color);*/
-/*    font-size: 16px;*/
-/*}*/
+
+.meta-data-container {
+    color: var(--socials-color);
+    font-size: 16px;
+}
 /**/
 /**/
 /*/**/
