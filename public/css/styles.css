@@ -2,7 +2,8 @@
 
 body {
   background-color: var(--background-color);
-  font-family: 'IBM Plex Sans', sans;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 500;
 }
 
 /* 
@@ -39,7 +40,7 @@ MAIN SITE
 #main-nav-bar-item {
   text-transform: uppercase;
   color: var(--secondary-color);
-  font-weight: normal;
+  font-weight: 700;
   letter-spacing: 4px;
   padding-right: 10px;
   text-decoration: none;
@@ -49,7 +50,7 @@ MAIN SITE
 .section p a {
   text-transform: uppercase;
   color: var(--primary-color);
-  font-weight: normal;
+  font-weight: 700;
   letter-spacing: 4px;
   padding-right: 10px;
   text-decoration: none;
@@ -140,17 +141,13 @@ DEFAULT TAGS
 p,
 li {
   color: var(--default-text-color);
-  font-weight: 300;
-  font-size: 16px;
 }
 
 h1 {
   color: var(--primary-color);
-  font-weight: normal;
   letter-spacing: 4px;
   padding-right: 10px;
   text-decoration: none;
-  font-size: 20px;
   text-transform: uppercase;
 }
 
@@ -158,28 +155,22 @@ h1 {
 h2 {
   text-transform: uppercase;
   color: var(--secondary-color);
-  font-weight: normal;
   letter-spacing: 4px;
   padding-right: 10px;
   text-decoration: none;
-  font-size: 16px;
 }
 
 h3 {
   text-transform: uppercase;
   color: var(--primary-color);
-  font-weight: normal;
   letter-spacing: 4px;
   padding-right: 10px;
   text-decoration: none;
-  font-size: 20px;
 }
 
 
 a p {
   color: var(--primary-color);
-  letter-spacing: 4px;
-  font-size: 20px;
   text-transform: uppercase;
 }
 
@@ -214,97 +205,44 @@ CONTENT FROM THE MARKDOWN FILES
     margin-left: 20%;
     margin-right: 20%;
 }
+
 /*
 METADATA CONTAINER FOR THE INFO LIKE DATE AND TAGS FOR THE BLOG LIST
 */
-
 .meta-data-container {
     color: var(--socials-color);
-    font-size: 16px;
 }
-/**/
-/**/
-/*/**/
-/*SINGLE BLOG ENTRY STUFF*/
-/**/
+
+/*
+* PROJECTS GRID FOR THE LIST OF PROJECTS
 */
-/*.blog-title {*/
-/*    text-decoration: none;*/
-/*}*/
-/**/
-/*.blog-title p {*/
-/*    transition: color 0.3s;*/
-/*}*/
-/**/
-/*.blog-title:hover p {*/
-/*    color: var(--secondary-color); !important;*/
-/*}*/
-/**/
-/**/
-/*footer {*/
-/*    padding: 3%;*/
-/*}*/
-/**/
-/*/**/
-/*PROJECTS GRID FOR THE LIST OF PROJECTS*/
-/**/
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(17vw, 100px)); /* This means each grid item will be at least 200px wide and will adjust dynamically */
+    gap: 30px; /* Space between each grid item */
+    justify-content: center; /* Center the grid items */
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.project-entry {
+    text-align: center; /* Center the title below the image */
+    transition: all 0.40s ease;
+}
+
+.project-entry:hover {
+    filter: brightness(1.2);
+}
+.project-thumbnail {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1; /* Makes the image behave as a square. This is a modern CSS feature and may not work in older browsers. */
+
+    object-fit: cover; /* In case images aren't square, this will cover the space without stretching */
+
+}
+
+
+/*
+MEDIA QUERY: FOR THE TABLET
 */
-/*.projects-grid {*/
-/*    display: grid;*/
-/*    grid-template-columns: repeat(3, minmax(17vw, 100px)); /* This means each grid item will be at least 200px wide and will adjust dynamically */
-*/
-/*    gap: 30px; /* Space between each grid item */
-*/
-/*    justify-content: center; /* Center the grid items */
-*/
-/*    padding-left: 15%;*/
-/*    padding-right: 15%;*/
-/*}*/
-/**/
-/*.project-entry {*/
-/*    text-align: center; /* Center the title below the image */
-*/
-/*    transition: all 0.40s ease;*/
-/*}*/
-/**/
-/*.project-entry:hover {*/
-/*    filter: brightness(1.2);*/
-/*}*/
-/**/
-/**/
-/*.project-thumbnail {*/
-/*    width: 100%;*/
-/*    height: auto;*/
-/*    aspect-ratio: 1 / 1; /* Makes the image behave as a square. This is a modern CSS feature and may not work in older browsers. */
-*/
-/*    object-fit: cover; /* In case images aren't square, this will cover the space without stretching */
-*/
-/*}*/
-/**/
-/*/* */
-/*MEDIA QUERY: FOR THE TABLET*/
-/**/
-*/
-/*@media (max-width: 1024px) {*/
-/*    .row {*/
-/*        flex-direction: column;*/
-/*    }*/
-/**/
-/*    .column:first-child {*/
-/*        flex: 0.25;*/
-/*    }*/
-/**/
-/*    .column:last-child {*/
-/*        flex: 0.75;*/
-/*    }*/
-/**/
-/*    .column #rightinfo {*/
-/*        display: flex;*/
-/*        flex-direction: column; /* To keep the content vertically stacked */
-*/
-/*        align-items: center; /* This will horizontally center the child items */
-*/
-/*        justify-content: center; /* This will vertically center the child items */
-*/
-/*    }*/
-/*}*/

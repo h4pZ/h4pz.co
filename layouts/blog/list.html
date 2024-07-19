@@ -3,7 +3,7 @@
      {{ range .Pages }}
           <div class="content">
                <div>
-                    <a class="blog-title" href="{{ .RelPermalink }}"><p>{{ .Title }}</p></a>
+                    <a class="entry-title" href="{{ .RelPermalink }}"><p>{{ .Title }}</p></a>
                </div>
                <div class="meta-data-container">{{ dateFormat "Monday, Jan 2, 2006" .Date }}</div>
                <div class="meta-data-container">{{ if .Params.tags }}<strong>Tags:</strong> {{range .Params.tags}}<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div>
