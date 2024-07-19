@@ -1,214 +1,222 @@
 @import url("colors.css");
 
 body {
-    background-color: var(--background-color);
-    font-family: 'IBM Plex Sans', sans;
-}
-
-ul {
-    padding: 0;
+  background-color: var(--background-color);
+  font-family: 'IBM Plex Sans', sans;
 }
 
 /* 
 MAIN SITE
 */
 .row {
-    display: flex;
-    justify-content: space-between;
-    height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
 }
+
 .column {
-    flex: 50%;
-    position: relative;
-    overflow: hidden;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  flex: 50%;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .column img.full {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    border: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  border: 0;
 }
 
 .section {
-    margin-right: 8.4px;
+  margin-right: 8.4px;
 }
 
 #main-nav-bar-item {
-    text-transform: uppercase;
-    color: var(--secondary-color);
-    font-weight: normal;
-    letter-spacing: 4px;
-    padding-right: 10px;
-    text-decoration: none;
-    font-size: 16px;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  font-weight: normal;
+  letter-spacing: 4px;
+  padding-right: 10px;
+  text-decoration: none;
+  font-size: 16px;
 }
 
 .section p a {
-    text-transform: uppercase;
-    color: var(--primary-color);
-    font-weight: normal;
-    letter-spacing: 4px;
-    padding-right: 10px;
-    text-decoration: none;
-    font-size: 14px;
-    transition: color 0.3s;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  font-weight: normal;
+  letter-spacing: 4px;
+  padding-right: 10px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
 }
 
 .section p a:hover {
-    color: var(--secondary-color); !important;
+  color: var(--secondary-color);
+  !important;
 
 }
 
 
 .socials {
-    color: var(--socials-color);
-    letter-spacing: 8px;
+  color: var(--socials-color);
+  letter-spacing: 8px;
 }
 
 .logo {
-    height: 60px;
-    max-width: 100%;
+  height: 60px;
+  max-width: 100%;
 }
 
 #rightinfo {
-    width: 500px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
-    text-align: left;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  text-align: left;
 }
 
 .social-icons {
-    display: flex;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-.social-icons li {
-    margin-left: 12px;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
-.articles, .social-icons {
-    display: flex;
-    align-items: center;
-    overflow: auto;
+.social-icons li {
+  margin-left: 12px;
+}
+
+.articles,
+.social-icons {
+  display: flex;
+  align-items: center;
+  overflow: auto;
 }
 
 
 .social-icons li a img {
-    max-width: 18px;
-    vertical-align: middle;
+  max-width: 18px;
+  vertical-align: middle;
 }
 
 
 .footer-socials {
-    display: flex;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-.footer-socials li {
-    margin-left: 12px;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
-.articles, .footer-socials {
-    display: flex;
-    align-items: center;
-    overflow: auto;
+.footer-socials li {
+  margin-left: 12px;
+}
+
+.articles,
+.footer-socials {
+  display: flex;
+  align-items: center;
+  overflow: auto;
 }
 
 
 .footer-socials li a img {
-    width: 10px;
-    vertical-align: middle;
+  width: 10px;
+  vertical-align: middle;
 }
 
 /*
 DEFAULT TAGS
 */
 
-p, li {
-    color: var(--default-text-color);
-    font-weight: 300;
-    font-size: 16px;
+
+p,
+li {
+  color: var(--default-text-color);
+  font-weight: 300;
+  font-size: 16px;
 }
 
 h1 {
-    color: var(--primary-color);
-    font-weight: normal;
-    letter-spacing: 4px;
-    padding-right: 10px;
-    text-decoration: none;
-    font-size: 20px;
-    text-transform: uppercase;
+  color: var(--primary-color);
+  font-weight: normal;
+  letter-spacing: 4px;
+  padding-right: 10px;
+  text-decoration: none;
+  font-size: 20px;
+  text-transform: uppercase;
 }
 
 
 h2 {
-    text-transform: uppercase;
-    color: var(--secondary-color);
-    font-weight: normal;
-    letter-spacing: 4px;
-    padding-right: 10px;
-    text-decoration: none;
-    font-size: 16px;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  font-weight: normal;
+  letter-spacing: 4px;
+  padding-right: 10px;
+  text-decoration: none;
+  font-size: 16px;
 }
 
 h3 {
-    text-transform: uppercase;
-    color: var(--primary-color);
-    font-weight: normal;
-    letter-spacing: 4px;
-    padding-right: 10px;
-    text-decoration: none;
-    font-size: 20px;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  font-weight: normal;
+  letter-spacing: 4px;
+  padding-right: 10px;
+  text-decoration: none;
+  font-size: 20px;
 }
 
 
 a p {
-    color: var(--primary-color);
-    letter-spacing: 4px;
-    font-size: 20px;
-    text-transform: uppercase;
+  color: var(--primary-color);
+  letter-spacing: 4px;
+  font-size: 20px;
+  text-transform: uppercase;
 }
 
 a {
-    color: var(--link-color);
-    transition: color 0.3s;
-    text-decoration: none;
+  color: var(--link-color);
+  transition: color 0.3s;
+  text-decoration: none;
 }
 
 a:hover {
-    color: var(--link-hover-color);
+  color: var(--link-hover-color);
+}
+
+.blog-list {
+  padding: 0;
 }
 
 
+
 /* 
-BASIC CONTAINER FOR EXAMPLE FOR THE ABOUT ME SECTION
+* ABOUT ME CONTAINER
 */
-.content-container {
-    margin: 0 auto;
-    padding: 0 0px;
-    max-width: 800px;
-    text-align: center;
+.about-me-container {
+  margin: 0 auto;
+  padding: 0 0px;
+  max-width: 800px;
+  text-align: center;
 }
 
 /*
 BLOG ENTRY CONTENT FOR THE LISTS OF BLOGS
 */
-.blog-entry {
-    margin-left: 30%;
-    margin-right: 30%;
-    padding-bottom: 2%;
-}
-
-
+/*.blog-entry {*/
+/*    margin-left: 30%;*/
+/*    margin-right: 30%;*/
+/*    padding-bottom: 2%;*/
+/*}*/
 /*
 CONTENT FROM THE MARKDOWN FILES
 */
@@ -216,85 +224,97 @@ CONTENT FROM THE MARKDOWN FILES
     margin-left: 30%;
     margin-right: 30%;
 }
-
-/*
-METADATA CONTAINER FOR THE INFO LIKE DATE AND TAGS FOR THE BLOG LIST
+/**/
+/*METADATA CONTAINER FOR THE INFO LIKE DATE AND TAGS FOR THE BLOG LIST*/
+/**/
 */
-.meta-data-container {
-    color: var(--socials-color);
-    font-size: 16px;
-}
-
-
-/*
-SINGLE BLOG ENTRY STUFF
+/*.meta-data-container {*/
+/*    color: var(--socials-color);*/
+/*    font-size: 16px;*/
+/*}*/
+/**/
+/**/
+/*/**/
+/*SINGLE BLOG ENTRY STUFF*/
+/**/
 */
-.blog-title {
-    text-decoration: none;
-}
-
-.blog-title p {
-    transition: color 0.3s;
-}
-
-.blog-title:hover p {
-    color: var(--secondary-color); !important;
-}
-
-
-footer {
-    padding: 3%;
-}
-
-/*
-PROJECTS GRID FOR THE LIST OF PROJECTS
+/*.blog-title {*/
+/*    text-decoration: none;*/
+/*}*/
+/**/
+/*.blog-title p {*/
+/*    transition: color 0.3s;*/
+/*}*/
+/**/
+/*.blog-title:hover p {*/
+/*    color: var(--secondary-color); !important;*/
+/*}*/
+/**/
+/**/
+/*footer {*/
+/*    padding: 3%;*/
+/*}*/
+/**/
+/*/**/
+/*PROJECTS GRID FOR THE LIST OF PROJECTS*/
+/**/
 */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(17vw, 100px)); /* This means each grid item will be at least 200px wide and will adjust dynamically */
-    gap: 30px; /* Space between each grid item */
-    justify-content: center; /* Center the grid items */
-    padding-left: 15%;
-    padding-right: 15%;
-}
-
-.project-entry {
-    text-align: center; /* Center the title below the image */
-    transition: all 0.40s ease;
-}
-
-.project-entry:hover {
-    filter: brightness(1.2);
-}
-
-
-.project-thumbnail {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1 / 1; /* Makes the image behave as a square. This is a modern CSS feature and may not work in older browsers. */
-    object-fit: cover; /* In case images aren't square, this will cover the space without stretching */
-}
-
-/* 
-MEDIA QUERY: FOR THE TABLET
+/*.projects-grid {*/
+/*    display: grid;*/
+/*    grid-template-columns: repeat(3, minmax(17vw, 100px)); /* This means each grid item will be at least 200px wide and will adjust dynamically */
 */
-@media (max-width: 1024px) {
-    .row {
-        flex-direction: column;
-    }
-
-    .column:first-child {
-        flex: 0.25;
-    }
-
-    .column:last-child {
-        flex: 0.75;
-    }
-
-    .column #rightinfo {
-        display: flex;
-        flex-direction: column; /* To keep the content vertically stacked */
-        align-items: center; /* This will horizontally center the child items */
-        justify-content: center; /* This will vertically center the child items */
-    }
-}
+/*    gap: 30px; /* Space between each grid item */
+*/
+/*    justify-content: center; /* Center the grid items */
+*/
+/*    padding-left: 15%;*/
+/*    padding-right: 15%;*/
+/*}*/
+/**/
+/*.project-entry {*/
+/*    text-align: center; /* Center the title below the image */
+*/
+/*    transition: all 0.40s ease;*/
+/*}*/
+/**/
+/*.project-entry:hover {*/
+/*    filter: brightness(1.2);*/
+/*}*/
+/**/
+/**/
+/*.project-thumbnail {*/
+/*    width: 100%;*/
+/*    height: auto;*/
+/*    aspect-ratio: 1 / 1; /* Makes the image behave as a square. This is a modern CSS feature and may not work in older browsers. */
+*/
+/*    object-fit: cover; /* In case images aren't square, this will cover the space without stretching */
+*/
+/*}*/
+/**/
+/*/* */
+/*MEDIA QUERY: FOR THE TABLET*/
+/**/
+*/
+/*@media (max-width: 1024px) {*/
+/*    .row {*/
+/*        flex-direction: column;*/
+/*    }*/
+/**/
+/*    .column:first-child {*/
+/*        flex: 0.25;*/
+/*    }*/
+/**/
+/*    .column:last-child {*/
+/*        flex: 0.75;*/
+/*    }*/
+/**/
+/*    .column #rightinfo {*/
+/*        display: flex;*/
+/*        flex-direction: column; /* To keep the content vertically stacked */
+*/
+/*        align-items: center; /* This will horizontally center the child items */
+*/
+/*        justify-content: center; /* This will vertically center the child items */
+*/
+/*    }*/
+/*}*/

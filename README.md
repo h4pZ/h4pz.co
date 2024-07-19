@@ -8,3 +8,5 @@
 
 - blog width and blog single page width are not the same
 - add randomizer for the start page (maybe remove gif and add also memes).
+
+- Create a hovering effect over the blog posts and add a square image to the right if there is any
