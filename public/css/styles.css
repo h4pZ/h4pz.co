@@ -186,6 +186,21 @@ a:hover {
   padding: 0;
 }
 
+/*
+* BLOG
+*/
+.blog-card {
+  transition: background-color 0.5s;
+  padding: 10px; /* Add padding to make the container a bit bigger */
+  margin: 10px 0; /* Optional: add margin to separate each card */
+  border-radius: 5px; /* Optional: add rounded corners for better visual appeal */
+}
+
+.blog-card:hover {
+  background-color: rgba(180, 172, 230, 0.3); /* Light blue with 30% opacity */
+}
+
+
 /* 
 * ABOUT ME CONTAINER
 */

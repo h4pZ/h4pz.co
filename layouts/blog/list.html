@@ -1,7 +1,7 @@
 {{ define "main" }}
 <ul class="blog-list">
      {{ range .Pages }}
-          <div class="content">
+          <div class="content blog-card">
                <div>
                     <a class="entry-title" href="{{ .RelPermalink }}"><p>{{ .Title }}</p></a>
                </div>
