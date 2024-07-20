@@ -183,7 +183,7 @@ a:hover {
 }
 
 .blog-card:hover {
-  background-color: rgba(180, 172, 230, 0.3); /* Light blue with 30% opacity */
+  background-color: rgba(172, 230, 209, 0.15); /* Light blue with 30% opacity */
 }
 
 
@@ -269,12 +269,16 @@ METADATA CONTAINER FOR THE INFO LIKE DATE AND TAGS FOR THE BLOG LIST
 
 .project-entry {
     text-align: center; /* Center the title below the image */
-    transition: all 0.40s ease;
 }
 
-.project-entry:hover {
-    filter: brightness(1.5);
+.project-entry .entry-title {
+   transition: all 0.40s ease;
 }
+
+.project-entry:hover .entry-title {
+    color: var(--secondary-color); !important;
+}
+
 .project-thumbnail {
     width: 100%;
     height: auto;
