@@ -7,6 +7,7 @@ thumbnail: "/images/blog/em-algo/thumbnail.png"
 
 An expectation maximization exmaple
 <!--more-->
+---
 
 What this means is that there exists a data generator process to which we can only collect (or it was only collected) part of the data $X$ associated with it, instead of the full data $X, Z$. Usually a model is constructed around the marginalized maximum likelihood estimator:
 

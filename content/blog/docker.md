@@ -5,8 +5,9 @@ draft: false
 thumbnail: "/images/blog/docker/thumbnail.png"
 ---
 
-Bunch of docker information
+Docker info dump
 <!--more-->
+---
 
 
 ## Docker
