@@ -2,6 +2,7 @@
 title: "Change Default Browser"
 date: 2023-08-11T22:37:45+02:00
 draft: false
+thumbnail: "/images/blog/change_default_browser/thumbnail.png"
 ---
 
 Change the default web browser in Manjaro bspwm

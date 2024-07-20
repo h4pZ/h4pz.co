@@ -29,11 +29,12 @@
 <body>
     <main class="row">
         <div class="column">
-            <img src="./images/landing_melt_gif.gif" alt="glitch logo" class="full">
+            <img id="randomImage" src="" alt="glitch logo" class="full">
         </div>
         <div class="column">
             <div id="rightinfo">
-                <img class="logo" src="./images/hapz_nihon_rustica.png" alt="logo">
+                <img class="logo" src="./images/h4pz_skull.jpg" alt="logo">
+
                 <p class="socials">H  4  P  Z</p>
                 <div class="articles">
                     
@@ -59,6 +60,67 @@
             </div>
         </div>
     </main>
+    <script>
+    var images = [
+        
+            "amd.jpg",
+        
+            "asml.jpg",
+        
+            "bsod.png",
+        
+            "btc.jpg",
+        
+            "burguerking.png",
+        
+            "chip.jpg",
+        
+            "columnskull.jpg",
+        
+            "computerslain.png",
+        
+            "datacenter.jpg",
+        
+            "gits-ey.jpg",
+        
+            "gits_n64.jpg",
+        
+            "gods.png",
+        
+            "guts_flow.jpg",
+        
+            "landing_melt_gif.gif",
+        
+            "linux.jpg",
+        
+            "not_virus.jpg",
+        
+            "nvidia.jpg",
+        
+            "psp.jpg",
+        
+            "rainlain.jpg",
+        
+            "segfault.jpg",
+        
+            "shinji.jpg",
+        
+            "sleepy.jpg",
+        
+            "sotn.jpg",
+        
+            "teams.jpg",
+        
+            "tired.png",
+        
+    ];
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var img = document.getElementById('randomImage');
+        var randomIndex = Math.floor(Math.random() * images.length);
+        img.src = '/images/left_column/' + images[randomIndex];
+    });
+    </script>
 </body>
 </html>
 

@@ -2,9 +2,10 @@
 title: "Docker"
 date: 2023-08-13T20:39:09+02:00
 draft: false
+thumbnail: "/images/blog/docker/thumbnail.png"
 ---
 
-This document contains information about what docker is and some basic commands. This contains information that I would liked to read when I was starting figuring out what this tool does. 
+Bunch of docker information
 <!--more-->
 
 

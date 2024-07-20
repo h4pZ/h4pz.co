@@ -2,6 +2,7 @@
 title: "Expectation Maximization Algorithm"
 date: 2023-09-10T18:47:56+02:00
 draft: false
+thumbnail: "/images/blog/em-algo/thumbnail.png"
 ---
 
 An expectation maximization exmaple

@@ -6,11 +6,12 @@
 <body>
     <main class="row">
         <div class="column">
-            <img src="/images/landing_melt_gif.gif" alt="glitch logo" class="full">
+            <img id="randomImage" src="" alt="glitch logo" class="full">
         </div>
         <div class="column">
             <div id="rightinfo">
-                <img class="logo" src="/images/hapz_nihon_rustica.png" alt="logo">
+                <img class="logo" src="/images/h4pz_skull.jpg" alt="logo">
+
                 <p class="socials">H  4  P  Z</p>
                 <div class="articles">
                     {{ range .Pages.ByWeight }}
@@ -28,6 +29,19 @@
             </div>
         </div>
     </main>
+    <script>
+    var images = [
+        {{ range (readDir "static/images/left_column") }}
+            "{{ .Name }}",
+        {{ end }}
+    ];
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var img = document.getElementById('randomImage');
+        var randomIndex = Math.floor(Math.random() * images.length);
+        img.src = '/images/left_column/' + images[randomIndex];
+    });
+    </script>
 </body>
 </html>
 

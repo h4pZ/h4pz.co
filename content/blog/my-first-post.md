@@ -1,10 +1,9 @@
 ---
 title: "My First Post"
 date: 2023-07-21T23:07:23+02:00
-draft: true
+draft: false
+thumbnail: "/images/blog/first/thumbnail.png"
 ---
-
-# This is my first post
 
 $ y = mx + b $
 

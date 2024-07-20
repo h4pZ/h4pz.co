@@ -27,7 +27,7 @@
       <link>https://www.h4pz.co/blog/docker/</link>
       <pubDate>Sun, 13 Aug 2023 20:39:09 +0200</pubDate>
       <guid>https://www.h4pz.co/blog/docker/</guid>
-      <description>&lt;p&gt;This document contains information about what docker is and some basic commands. This contains information that I would liked to read when I was starting figuring out what this tool does.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Bunch of docker information&lt;/p&gt;</description>
     </item>
     <item>
       <title>Change Default Browser</title>
@@ -35,6 +35,13 @@
       <pubDate>Fri, 11 Aug 2023 22:37:45 +0200</pubDate>
       <guid>https://www.h4pz.co/blog/change-default-browser/</guid>
       <description>&lt;p&gt;Change the default web browser in Manjaro bspwm&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>My First Post</title>
+      <link>https://www.h4pz.co/blog/my-first-post/</link>
+      <pubDate>Fri, 21 Jul 2023 23:07:23 +0200</pubDate>
+      <guid>https://www.h4pz.co/blog/my-first-post/</guid>
+      <description>$ y = mx + b $</description>
     </item>
   </channel>
 </rss>
