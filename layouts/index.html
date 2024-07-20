@@ -16,7 +16,7 @@
                 <div class="articles">
                     {{ range .Pages.ByWeight }}
                         <article class="section">
-                            <p class="main-nav-bar-item"><a href="{{ .Permalink }}">{{ .Title }}</a></p>
+                            <p><a href="{{ .Permalink }}">{{ .Title }}</a></p>
                         </article>
                     {{ end }}
                     <ul class="social-icons">
