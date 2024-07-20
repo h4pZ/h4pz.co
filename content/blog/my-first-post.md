@@ -5,5 +5,7 @@ draft: false
 thumbnail: "/images/blog/first/thumbnail.png"
 ---
 
+---
+
 $ y = mx + b $
 

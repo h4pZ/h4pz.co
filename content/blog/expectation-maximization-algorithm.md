@@ -3,10 +3,7 @@ title: "Expectation Maximization Algorithm"
 date: 2023-09-10T18:47:56+02:00
 draft: false
 thumbnail: "/images/blog/em-algo/thumbnail.png"
----
-
-An expectation maximization exmaple
-<!--more-->
+summary: An expectation maximization exmaple
 ---
 
 What this means is that there exists a data generator process to which we can only collect (or it was only collected) part of the data $X$ associated with it, instead of the full data $X, Z$. Usually a model is constructed around the marginalized maximum likelihood estimator:

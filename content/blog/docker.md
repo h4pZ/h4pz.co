@@ -3,10 +3,9 @@ title: "Docker"
 date: 2023-08-13T20:39:09+02:00
 draft: false
 thumbnail: "/images/blog/docker/thumbnail.png"
+summary: Dcoker info dump
 ---
 
-Docker info dump
-<!--more-->
 ---
 
 

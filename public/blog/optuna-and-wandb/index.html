@@ -56,8 +56,7 @@
 <div class="content">
   <div class="meta-data-container">Sunday, Aug 13, 2023</div>
   <div ><h3>Optuna and Wandb</h3></div>
-  <div ><p>How to use weights and biases with optuna?</p>
-<hr>
+  <div ><hr>
 <p>This tool also allows you to do some hyperparameters sweeps. It comes with some predefined <a href="https://github.com/wandb/client/tree/master/wandb/sweeps">algorithms</a> for this purpose. However, you might want to use an alternative method or library. In my case, I wanted to use <a href="https://optuna.org/">Optuna</a>, which is a bayesian hyperparameter optimization framework. Unfortunately I couldn&rsquo;t find a single example on the web on how to do so. More specifically, I didn&rsquo;t find an example on how to run the study and get both the hyperparameter history and a parallel coordinate plot in WandB. So, that&rsquo;s what this blog entry is for.</p>
 <h2 id="tldr">TLDR</h2>
 <p>I didn&rsquo;t know how to use WandB with Optuna such that I could get a parallel coordinate plot and the history of parameters, and since I couldn&rsquo;t find an example on Google, I made one.</p>
@@ -161,7 +160,8 @@
 <h2 id="solution">Solution</h2>
 <p>The solution is to create a <code>summary</code> WandB run outside of the study and then log the mse and the parameters for each timestep from the history of the trials that Optuna saves in <code>study.trials</code>. This can be seen at the end of the <code>main</code> function. After running the code, one will get the plots shown above on WandB with Optuna :)</p>
 <h3 id="disclaimer">disclaimer</h3>
-<p>This is the solution I came with for this problem. There might be an even easier solution or a trivial one that I missed. If someone knows a better way of doing this, please let me know.</p></div>
+<p>This is the solution I came with for this problem. There might be an even easier solution or a trivial one that I missed. If someone knows a better way of doing this, please let me know.</p>
+</div>
 </div>
 
 

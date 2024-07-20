@@ -3,11 +3,10 @@ title: "Optuna and Wandb"
 date: 2023-08-13T21:33:50+02:00
 draft: false
 thumbnail: "/images/blog/optuna_and_wandb/thumbnail.png"
+summary: How to use weights and biases with optuna?
 ---
 
 
-How to use weights and biases with optuna?
-<!--more-->
 ---
 
 
