@@ -4,7 +4,7 @@ date: 2023-08-13T20:39:09+02:00
 draft: false
 ---
 
-This document contains information about what docker is and some basic commands. This contains information that I would liked to read when I was starting figuring out what this tool does. It is primarily targeted to a non-so-technical audience like me who doesn't have a CS background.
+This document contains information about what docker is and some basic commands. This contains information that I would liked to read when I was starting figuring out what this tool does. 
 <!--more-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Dota2"
+title: "Dota 2 Toxicity"
 date: 2023-09-10T20:53:50+02:00
 draft: false
 thumbnail: "/images/projects/dota2/glitch_dota_2_logo.jpg"
@@ -44,11 +44,11 @@ Unfortunately this distribution is intractable. So a variational Bayesian method
 $$q(\theta, \mathbf{z} | \gamma, \varphi)=q(\theta | \gamma) \prod_{n=1}^{N} q\left(z_{n} | \varphi_{n}\right)$$
 ![img](/images/projects/dota2/lda_gm.png)
 
-Figure 1: Graphical model representation of the LDA model
+<span class="figure-caption">Figure 1: Graphical model representation of the LDA model</span>
 
 ![img](/images/projects/dota2/var_dist.png)
 
-Figure 2: Graphical model representation of the variational distribution used toapproximate the posterior in LDA
+<span class="figure-caption">Figure 2: Graphical model representation of the variational distribution used toapproximate the posterior in LDA</span>
 
 
 # Data 
@@ -59,11 +59,21 @@ The data used in this project comes from a kaggle dataset [6] which was collecte
 
 As Dota 2 is an online multiplayer game, any player from around the world can take part of the experience. Thus, Dota 2 text messages can come from any language or even a mixture of them. For example, combinations of Spanish and English are not uncommon in the Americas region (from personal experience). This is important because the model used to measure toxicity in this work supports mostly English as the default language. So, as part of the preprocessing the language for each text message was inferred and tagged as a new feature in the dataset. The distribution of the top 20 languages can be seen in Figure 7. The most used languages in the game are English and Russian. So the first preprocessing step was to remove all the languages that weren’t tagged as English. The second step on the preprocessing step consisted of removing stop words, non alpha-numerical words and words that were shorter than 3 letters.
 
-![img](/images/projects/dota2/language_distribution.png)
-![img](/images/projects/dota2/message_distribution_per_player_slot.png)
 ![img](/images/projects/dota2/message_distribution_per_match.png)
-![img](/images/projects/dota2/message_distribution_time.png)
+<span class="figure-caption">Figure 3: Message distribution per match</span>
+
+![img](/images/projects/dota2/message_distribution_per_player_slot.png)
+<span class="figure-caption">Figure 4: Message distribution per player slot</span>
+
 ![img](/images/projects/dota2/message_length_distribution.png)
+<span class="figure-caption">Figure 5: Message length distribution</span>
+
+![img](/images/projects/dota2/message_distribution_time.png)
+<span class="figure-caption">Figure 6: Message distribution over match length</span>
+
+
+![img](/images/projects/dota2/language_distribution.png)
+<span class="figure-caption">Figure 7: Language distribution of messages</span>
 
 # Method
 ## Preprocessing

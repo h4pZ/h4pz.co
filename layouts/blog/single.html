@@ -1,6 +1,8 @@
 {{ define "main" }}
-<div class="content meta-data-container date-blog">{{ dateFormat "Monday, Jan 2, 2006" .Date }}</div>
-<div class="content"><h3>{{ .Title }}</h3></div>
-<div class="content">{{ .Content }}</div>
+<div class="content">
+  <div class="meta-data-container">{{ dateFormat "Monday, Jan 2, 2006" .Date }}</div>
+  <div ><h3>{{ .Title }}</h3></div>
+  <div >{{ .Content }}</div>
+</div>
 {{ end }}
 

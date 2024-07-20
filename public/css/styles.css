@@ -159,10 +159,6 @@ h3 {
 }
 
 
-a p {
-  color: var(--primary-color);
-  text-transform: uppercase;
-}
 
 a {
   color: var(--link-color);
@@ -183,13 +179,9 @@ a:hover {
 */
 .entry-title {
   color: var(--primary-color);
-  font-size: 20px;
-  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
-.entry-title p {
-  text-decoration: underline; 
-}
 
 .blog-card {
   transition: background-color 0.5s;
@@ -217,9 +209,29 @@ a:hover {
 CONTENT FROM THE MARKDOWN FILES
 */
 .content {
-    margin-left: 20%;
-    margin-right: 20%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
+
+img {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%; /* Ensure the image scales within its container */
+    height: auto;   /* Maintain the aspect ratio */
+}
+
+.figure-caption {
+    font-style: italic;
+    text-align: center;
+    display: block;
+    margin: 10px;
+    /* Add other styles as needed */
+}
+
 
 /*
 METADATA CONTAINER FOR THE INFO LIKE DATE AND TAGS FOR THE BLOG LIST

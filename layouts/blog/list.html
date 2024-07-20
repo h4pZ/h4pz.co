@@ -2,15 +2,16 @@
 <ul class="blog-list">
      {{ range .Pages }}
           <div class="content blog-card">
-               <div>
-                    <a class="entry-title" href="{{ .RelPermalink }}"><p>{{ .Title }}</p></a>
-               </div>
+            <a href="{{ .RelPermalink }}">
+               <div><p class="entry-title">{{ .Title }}</p></div>
                <div class="meta-data-container">{{ dateFormat "Monday, Jan 2, 2006" .Date }}</div>
                <div class="meta-data-container">{{ if .Params.tags }}<strong>Tags:</strong> {{range .Params.tags}}<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div>
                <div class="meta-data-container">{{ if .Params.categories }}<strong>Categories:</strong> {{range .Params.categories}}<a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div>
                <div class="meta-data-container">{{ if .Params.moods }}<strong>Moods:</strong> {{range .Params.moods}}<a href="{{ "/moods/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div>
 
                <p>{{.Summary}}</p>
+            </a>
+
 
           </div>
      {{ end }}

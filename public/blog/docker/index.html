@@ -7,7 +7,6 @@
 <link rel="stylesheet" href="../../css/navbar.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400&family=IBM+Plex+Serif:wght@400&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -51,9 +50,10 @@
     </header>
     
     
-<div class="content meta-data-container date-blog">Sunday, Aug 13, 2023</div>
-<div class="content"><h3>Docker</h3></div>
-<div class="content"><p>This document contains information about what docker is and some basic commands. This contains information that I would liked to read when I was starting figuring out what this tool does. It is primarily targeted to a non-so-technical audience like me who doesn&rsquo;t have a CS background.</p>
+<div class="content">
+  <div class="meta-data-container">Sunday, Aug 13, 2023</div>
+  <div ><h3>Docker</h3></div>
+  <div ><p>This document contains information about what docker is and some basic commands. This contains information that I would liked to read when I was starting figuring out what this tool does.</p>
 <h2 id="docker">Docker</h2>
 <p>Docker delivers software in packages called containers. It&rsquo;s main use is to kill the excuse &ldquo;it runs on my computer&rdquo; because if the software is ran on a docker container then it runs on every computer (if you can install docker on the new computer :)).</p>
 <p>The main two components of docker are it&rsquo;s server and client. Both are just software but they have different purposes. The docker server runs as a background process and waits for instructions. It&rsquo;s main purpose is to create, delete, modify, stop docker containers (programs that are being run on it&rsquo;s own isolated environment). The docker client is a command line software that we use as users. It&rsquo;s main purpose is to help us request changes to the containers to the docker server, like requesting to spin up a docker container.</p>
@@ -348,6 +348,7 @@ CMD [ &#34;nginx&#34;, &#34;-g&#34;, &#34;pid /tmp/nginx.pid; daemon off;&#34; ]
 </span></span></code></pre></div><p>Deleting a secret</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker secret rm &lt;secret-name&gt;
 </span></span></code></pre></div></div>
+</div>
 
 
     <footer>
