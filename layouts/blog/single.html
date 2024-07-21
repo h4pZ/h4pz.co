@@ -1,5 +1,5 @@
 {{ define "main" }}
-  <meta property="og:title" content="{{ .Title }}" />
+  <meta property="og:title" content="{{ .Params.title }}" />
   <meta property="og:description" content="{{ .Params.summary }}" />
   <meta property="og:image" content="{{ .Params.thumbnail | absURL }}" />
   <meta property="og:url" content="{{ .Permalink }}" />
