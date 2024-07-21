@@ -1,36 +1,40 @@
 @import url("colors.css");
 
 #navbar {
-    display: flex;
-    justify-content: center; /* Center the navbar contents horizontally */
-    padding: 40px;
+  display: flex;
+  justify-content: center;
+  /* Center the navbar contents horizontally */
+  padding: 40px;
 }
 
 .articles {
-    display: flex;
-    justify-content: center; /* Center the articles horizontally */
-    align-items: center; /* Center the articles vertically */
-    flex-wrap: wrap;
-    overflow: hidden;
+  display: flex;
+  justify-content: center;
+  /* Center the articles horizontally */
+  align-items: center;
+  /* Center the articles vertically */
+  flex-wrap: wrap;
+  overflow: hidden;
 }
 
 #navbar p {
-    margin: 0;
+  margin: 0;
 }
 
 #navbar p a {
-    color: var(--socials-color);
-    transition: color 0.3s;
-    text-align: center;
-    text-decoration: none; /* Ensure links have no underline by default */
-    display: block; /* Make the anchor a block element for better control */
+  color: var(--socials-color);
+  transition: color 0.3s;
+  text-align: center;
+  text-decoration: none;
+  /* Ensure links have no underline by default */
+  display: block;
+  /* Make the anchor a block element for better control */
 }
 
 #navbar p a.current {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 #navbar p a:hover {
-    color: var(--secondary-color);
+  color: var(--secondary-color);
 }
-

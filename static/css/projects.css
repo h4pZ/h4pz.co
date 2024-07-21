@@ -1,0 +1,38 @@
+/*
+* PROJECTS GRID FOR THE LIST OF PROJECTS
+*/
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(17vw, 100px));
+  /* This means each grid item will be at least 200px wide and will adjust dynamically */
+  gap: 30px;
+  /* Space between each grid item */
+  justify-content: center;
+  /* Center the grid items */
+}
+
+.project-entry {
+  text-align: center;
+  /* Center the title below the image */
+}
+
+.project-entry .entry-title {
+  transition: all 0.50s ease;
+
+}
+
+.project-entry:hover .entry-title {
+  color: var(--secondary-color);
+  !important;
+}
+
+.project-thumbnail {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  /* Makes the image behave as a square. This is a modern CSS feature and may not work in older browsers. */
+
+  object-fit: cover;
+  /* In case images aren't square, this will cover the space without stretching */
+
+}

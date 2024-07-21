@@ -1,7 +1,8 @@
 {{ define "main" }}
+<link rel="stylesheet" href="/css/blog.css">
 <ul class="blog-list">
     {{ range .Pages }}
-    <div class="content blog-card">
+    <li class="content blog-card">
         <a href="{{ .RelPermalink }}">
             <div class="text-content">
                 <div><p class="entry-title">{{ .Title }}</p></div>
@@ -15,7 +16,7 @@
             <img  src="{{ .Params.thumbnail }}">
           </div>
         </a>
-    </div>
+    </li>
     {{ end }}
 </ul>
 {{ end }}

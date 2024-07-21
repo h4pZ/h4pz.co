@@ -34,7 +34,6 @@ MAIN SITE
   border: 0;
 }
 
-
 .section p a {
   text-transform: uppercase;
   color: var(--primary-color);
@@ -46,9 +45,9 @@ MAIN SITE
 }
 
 .section p a:hover {
-  color: var(--secondary-color); !important;
+  color: var(--secondary-color);
+  !important;
 }
-
 
 .socials {
   color: var(--socials-color);
@@ -88,12 +87,10 @@ MAIN SITE
   overflow: auto;
 }
 
-
 .social-icons li a img {
   max-width: 18px;
   vertical-align: middle;
 }
-
 
 .footer-socials {
   display: flex;
@@ -113,7 +110,6 @@ MAIN SITE
   overflow: auto;
 }
 
-
 .footer-socials li a img {
   width: 10px;
   vertical-align: middle;
@@ -122,8 +118,6 @@ MAIN SITE
 /*
 DEFAULT TAGS
 */
-
-
 p,
 li {
   color: var(--default-text-color);
@@ -135,7 +129,6 @@ h1 {
   text-decoration: none;
   text-transform: uppercase;
 }
-
 
 h2 {
   text-transform: uppercase;
@@ -150,8 +143,6 @@ h3 {
   letter-spacing: 4px;
   text-decoration: none;
 }
-
-
 
 a {
   color: var(--link-color);
@@ -168,7 +159,36 @@ a:hover {
 }
 
 /*
-* BLOG
+CONTENT FROM THE MARKDOWN FILES
+*/
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+
+img {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  /* Ensure the image scales within its container */
+  height: auto;
+  /* Maintain the aspect ratio */
+}
+
+.figure-caption {
+  font-style: italic;
+  text-align: center;
+  display: block;
+  margin: 10px;
+  /* Add other styles as needed */
+}
+
+/*
+* Project and blog entries
 */
 .entry-title {
   color: var(--primary-color);
@@ -176,125 +196,12 @@ a:hover {
   text-transform: uppercase;
 }
 
-
-.blog-card {
-  height: 150px;
-  transition: all 0.50s ease;
-  border-radius: 5px; /* Optional: add rounded corners for better visual appeal */
-}
-
-.blog-card:hover {
-  background-color: rgba(172, 230, 209, 0.15); /* Light blue with 30% opacity */
-}
-
-.blog-card:hover .entry-title {
-  color: var(--secondary-color); !important;
-}
-
-
-
-.blog-card a {
-    display: flex;
-    align-items: flex-start;
-}
-
-.text-content {
-    flex: 0 0 80%;
-}
-
-.blog-thumbnail {
-    width: 20%;
-    height: 150px;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.blog-thumbnail img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-
-/* 
-* ABOUT ME CONTAINER
-*/
-.about-me-container {
-  margin: 0 auto;
-  padding: 0 0px;
-  max-width: 800px;
-  text-align: center;
-}
-
-/*
-CONTENT FROM THE MARKDOWN FILES
-*/
-.content {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 10px 20px;
-}
-
-img {
-    display: block;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 100%; /* Ensure the image scales within its container */
-    height: auto;   /* Maintain the aspect ratio */
-}
-
-.figure-caption {
-    font-style: italic;
-    text-align: center;
-    display: block;
-    margin: 10px;
-    /* Add other styles as needed */
-}
-
-
 /*
 METADATA CONTAINER FOR THE INFO LIKE DATE AND TAGS FOR THE BLOG LIST
 */
 .meta-data-container {
-    color: var(--socials-color);
+  color: var(--socials-color);
 }
-
-/*
-* PROJECTS GRID FOR THE LIST OF PROJECTS
-*/
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(17vw, 100px)); /* This means each grid item will be at least 200px wide and will adjust dynamically */
-    gap: 30px; /* Space between each grid item */
-    justify-content: center; /* Center the grid items */
-}
-
-.project-entry {
-    text-align: center; /* Center the title below the image */
-}
-
-.project-entry .entry-title {
-   transition: all 0.50s ease;
-
-}
-
-.project-entry:hover .entry-title {
-    color: var(--secondary-color); !important;
-}
-
-.project-thumbnail {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1 / 1; /* Makes the image behave as a square. This is a modern CSS feature and may not work in older browsers. */
-
-    object-fit: cover; /* In case images aren't square, this will cover the space without stretching */
-
-}
-
 
 /*
 MEDIA QUERY: FOR THE TABLET
@@ -303,11 +210,12 @@ MEDIA QUERY: FOR THE TABLET
   .row {
     flex-direction: column;
   }
-  
+
   .column {
     width: 100%;
     height: auto;
   }
+
   .column img.full {
     width: 100%;
     height: auto;
