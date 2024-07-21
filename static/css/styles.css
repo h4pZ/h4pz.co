@@ -155,7 +155,7 @@ h3 {
 
 a {
   color: var(--link-color);
-  transition: color 0.3s;
+  transition: all 0.50s ease;
   text-decoration: none;
 }
 
@@ -172,19 +172,25 @@ a:hover {
 */
 .entry-title {
   color: var(--primary-color);
+  transition: all 0.50s ease;
   text-transform: uppercase;
 }
 
 
 .blog-card {
   height: 150px;
-  transition: background-color 0.5s;
+  transition: all 0.50s ease;
   border-radius: 5px; /* Optional: add rounded corners for better visual appeal */
 }
 
 .blog-card:hover {
   background-color: rgba(172, 230, 209, 0.15); /* Light blue with 30% opacity */
 }
+
+.blog-card:hover .entry-title {
+  color: var(--secondary-color); !important;
+}
+
 
 
 .blog-card a {
@@ -272,7 +278,8 @@ METADATA CONTAINER FOR THE INFO LIKE DATE AND TAGS FOR THE BLOG LIST
 }
 
 .project-entry .entry-title {
-   transition: all 0.40s ease;
+   transition: all 0.50s ease;
+
 }
 
 .project-entry:hover .entry-title {
