@@ -6,8 +6,15 @@
     <description>Recent content in BLOG on h4pZ</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 10 Sep 2023 18:47:56 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 21 Jul 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://h4pz.co/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>International BSOD Gallery</title>
+      <link>https://h4pz.co/blog/international_bsod/</link>
+      <pubDate>Sun, 21 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://h4pz.co/blog/international_bsod/</guid>
+      <description>Gallery in commemoration of the international BSOD day</description>
+    </item>
     <item>
       <title>Expectation Maximization Algorithm</title>
       <link>https://h4pz.co/blog/expectation-maximization-algorithm/</link>
