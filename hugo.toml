@@ -1,7 +1,7 @@
 baseURL = 'https://www.h4pz.co/'
 relativeURLs = true
 languageCode = 'en-us'
-title = "h4pz.co"
+title = "h4pZ"
 
 [markup.goldmark.renderer]
     unsafe = true
