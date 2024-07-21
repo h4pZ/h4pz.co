@@ -2,56 +2,56 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.h4pz.co/projects/</loc>
+    <loc>https://h4pz.co/projects/</loc>
     <lastmod>2023-09-10T20:53:50+02:00</lastmod>
   </url><url>
-    <loc>https://www.h4pz.co/blog/</loc>
+    <loc>https://h4pz.co/blog/</loc>
     <lastmod>2023-09-10T18:47:56+02:00</lastmod>
   </url><url>
-    <loc>https://www.h4pz.co/about/</loc>
+    <loc>https://h4pz.co/about/</loc>
     <lastmod>2023-07-24T21:13:57+02:00</lastmod>
   </url><url>
-    <loc>https://www.h4pz.co/projects/dota2/</loc>
+    <loc>https://h4pz.co/projects/dota2/</loc>
     <lastmod>2023-09-10T20:53:50+02:00</lastmod>
   </url><url>
-    <loc>https://www.h4pz.co/</loc>
+    <loc>https://h4pz.co/</loc>
     <lastmod>2023-09-10T20:53:50+02:00</lastmod>
   </url><url>
-    <loc>https://www.h4pz.co/projects/vae/</loc>
+    <loc>https://h4pz.co/projects/vae/</loc>
     <lastmod>2023-09-10T20:50:45+02:00</lastmod>
   </url><url>
-    <loc>https://www.h4pz.co/projects/img2img/</loc>
+    <loc>https://h4pz.co/projects/img2img/</loc>
     <lastmod>2023-09-10T20:38:20+02:00</lastmod>
   </url><url>
-    <loc>https://www.h4pz.co/projects/mixture-density-network/</loc>
+    <loc>https://h4pz.co/projects/mixture-density-network/</loc>
     <lastmod>2023-09-10T20:26:47+02:00</lastmod>
   </url><url>
-    <loc>https://www.h4pz.co/projects/draw/</loc>
+    <loc>https://h4pz.co/projects/draw/</loc>
     <lastmod>2023-09-10T20:16:03+02:00</lastmod>
   </url><url>
-    <loc>https://www.h4pz.co/projects/deep-dream/</loc>
+    <loc>https://h4pz.co/projects/deep-dream/</loc>
     <lastmod>2023-09-10T19:37:25+02:00</lastmod>
   </url><url>
-    <loc>https://www.h4pz.co/projects/painting-with-neural-networks/</loc>
+    <loc>https://h4pz.co/projects/painting-with-neural-networks/</loc>
     <lastmod>2023-09-10T19:25:34+02:00</lastmod>
   </url><url>
-    <loc>https://www.h4pz.co/blog/expectation-maximization-algorithm/</loc>
+    <loc>https://h4pz.co/blog/expectation-maximization-algorithm/</loc>
     <lastmod>2023-09-10T18:47:56+02:00</lastmod>
   </url><url>
-    <loc>https://www.h4pz.co/blog/optuna-and-wandb/</loc>
+    <loc>https://h4pz.co/blog/optuna-and-wandb/</loc>
     <lastmod>2023-08-13T21:33:50+02:00</lastmod>
   </url><url>
-    <loc>https://www.h4pz.co/blog/docker/</loc>
+    <loc>https://h4pz.co/blog/docker/</loc>
     <lastmod>2023-08-13T20:39:09+02:00</lastmod>
   </url><url>
-    <loc>https://www.h4pz.co/blog/change-default-browser/</loc>
+    <loc>https://h4pz.co/blog/change-default-browser/</loc>
     <lastmod>2023-08-11T22:37:45+02:00</lastmod>
   </url><url>
-    <loc>https://www.h4pz.co/blog/my-first-post/</loc>
+    <loc>https://h4pz.co/blog/my-first-post/</loc>
     <lastmod>2023-07-21T23:07:23+02:00</lastmod>
   </url><url>
-    <loc>https://www.h4pz.co/categories/</loc>
+    <loc>https://h4pz.co/categories/</loc>
   </url><url>
-    <loc>https://www.h4pz.co/tags/</loc>
+    <loc>https://h4pz.co/tags/</loc>
   </url>
 </urlset>

@@ -2,101 +2,101 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>h4pZ</title>
-    <link>https://www.h4pz.co/</link>
+    <link>https://h4pz.co/</link>
     <description>Recent content on h4pZ</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 10 Sep 2023 20:53:50 +0200</lastBuildDate>
-    <atom:link href="https://www.h4pz.co/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://h4pz.co/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ABOUT</title>
-      <link>https://www.h4pz.co/about/</link>
+      <link>https://h4pz.co/about/</link>
       <pubDate>Mon, 24 Jul 2023 21:13:57 +0200</pubDate>
-      <guid>https://www.h4pz.co/about/</guid>
+      <guid>https://h4pz.co/about/</guid>
       <description>ai, the wired and shell ghosts</description>
     </item>
     <item>
       <title>Dota 2 Toxicity</title>
-      <link>https://www.h4pz.co/projects/dota2/</link>
+      <link>https://h4pz.co/projects/dota2/</link>
       <pubDate>Sun, 10 Sep 2023 20:53:50 +0200</pubDate>
-      <guid>https://www.h4pz.co/projects/dota2/</guid>
+      <guid>https://h4pz.co/projects/dota2/</guid>
       <description>Introduction Dota 2 is a multiplayer online battle arena (MOBA) game. It’s one of the most popular competitive games in the market and has the biggest prize pool in a single event of all e-sports [13]. Due to its high popularity and e-sport scene [2], Dota 2 is regarded as a highly competitive game. As a Dota 2 player myself, I’ve experienced harassment and toxic behaviour in-game. This is not however, an isolated experience.</description>
     </item>
     <item>
       <title>Variational Autoencoder</title>
-      <link>https://www.h4pz.co/projects/vae/</link>
+      <link>https://h4pz.co/projects/vae/</link>
       <pubDate>Sun, 10 Sep 2023 20:50:45 +0200</pubDate>
-      <guid>https://www.h4pz.co/projects/vae/</guid>
+      <guid>https://h4pz.co/projects/vae/</guid>
       <description>WIP</description>
     </item>
     <item>
       <title>Image to Image translation</title>
-      <link>https://www.h4pz.co/projects/img2img/</link>
+      <link>https://h4pz.co/projects/img2img/</link>
       <pubDate>Sun, 10 Sep 2023 20:38:20 +0200</pubDate>
-      <guid>https://www.h4pz.co/projects/img2img/</guid>
+      <guid>https://h4pz.co/projects/img2img/</guid>
       <description>Image to image translation is part of what is known as cross-domain knowledge. The idea behind cross-domain knowledge is that there is a shared representation of an object in two domain spaces. For example, a photograph of persons face have a representation as a black and white sketch and vice versa. In this exploration I use the cyclegan model, which uses two autoencoders that translate one image from one domain to another, and two discriminators that judge whether an image was sampled from the actual domain or was generated.</description>
     </item>
     <item>
       <title>Mixture Density Network</title>
-      <link>https://www.h4pz.co/projects/mixture-density-network/</link>
+      <link>https://h4pz.co/projects/mixture-density-network/</link>
       <pubDate>Sun, 10 Sep 2023 20:26:47 +0200</pubDate>
-      <guid>https://www.h4pz.co/projects/mixture-density-network/</guid>
+      <guid>https://h4pz.co/projects/mixture-density-network/</guid>
       <description>The mixture density network or MDN was specified by Christopher Bishop in his book Pattern Recognition and Machine Learning. This model tries to predict the marginal probability of a variable Y by a mixture of Gaussian distributions and a latent variable z defined by the network it self. One advantage of this architecture, unlike the softmax function, is that it can express a wide range of probability distributions. For this project I implemented a multivariate Gaussian density network with the purpose to predict (like in the painting images with neural networks post) the most probable (R, G, B) vector for a pixel wich position is given by a point (x, y) in R2.</description>
     </item>
     <item>
       <title>Draw</title>
-      <link>https://www.h4pz.co/projects/draw/</link>
+      <link>https://h4pz.co/projects/draw/</link>
       <pubDate>Sun, 10 Sep 2023 20:16:03 +0200</pubDate>
-      <guid>https://www.h4pz.co/projects/draw/</guid>
+      <guid>https://h4pz.co/projects/draw/</guid>
       <description>Draw is a model that recreates the mechanism of attention done by humans. This model has T time steps (defined by the user) over which the recurrent neural network will recreate the original image step by step. Letting the network decide which patches of the image is going to draw first in a blank canvas. I used this model over a single image instead of over a whole data set, because I wanted to see how the model which is intended to work with MNIST, or CIFAR would work over one picture.</description>
     </item>
     <item>
       <title>Deep Dream</title>
-      <link>https://www.h4pz.co/projects/deep-dream/</link>
+      <link>https://h4pz.co/projects/deep-dream/</link>
       <pubDate>Sun, 10 Sep 2023 19:37:25 +0200</pubDate>
-      <guid>https://www.h4pz.co/projects/deep-dream/</guid>
+      <guid>https://h4pz.co/projects/deep-dream/</guid>
       <description>&lt;p&gt;The objective of this project/course work for CADL was to explore two styling techniques using deep learning. The first one is related with guided dreams/hallucinations, leveraging on the original idea of Inceptionism. The second one is based on style transfer. Both of these ideas were executed using the pre-trained network Inception (v5) of Google and using two paintings by Kim-Byngkwan and one picture done by Carol Pinzon. The subjects for this experiment are presented below.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Painting With Neural Networks</title>
-      <link>https://www.h4pz.co/projects/painting-with-neural-networks/</link>
+      <link>https://h4pz.co/projects/painting-with-neural-networks/</link>
       <pubDate>Sun, 10 Sep 2023 19:25:34 +0200</pubDate>
-      <guid>https://www.h4pz.co/projects/painting-with-neural-networks/</guid>
+      <guid>https://h4pz.co/projects/painting-with-neural-networks/</guid>
       <description>&lt;p&gt;This project was born as one of my first course work for the  Creative Applications of Deep Learning  course on Kadenze (which I recommend). The idea of this project was to train a function that maps points (x, y) regarding the location of a pixel in R2, to a point (R, G, B) corresponding to the values of each channel in the pixel.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Expectation Maximization Algorithm</title>
-      <link>https://www.h4pz.co/blog/expectation-maximization-algorithm/</link>
+      <link>https://h4pz.co/blog/expectation-maximization-algorithm/</link>
       <pubDate>Sun, 10 Sep 2023 18:47:56 +0200</pubDate>
-      <guid>https://www.h4pz.co/blog/expectation-maximization-algorithm/</guid>
+      <guid>https://h4pz.co/blog/expectation-maximization-algorithm/</guid>
       <description>An expectation maximization exmaple</description>
     </item>
     <item>
       <title>Optuna and Wandb</title>
-      <link>https://www.h4pz.co/blog/optuna-and-wandb/</link>
+      <link>https://h4pz.co/blog/optuna-and-wandb/</link>
       <pubDate>Sun, 13 Aug 2023 21:33:50 +0200</pubDate>
-      <guid>https://www.h4pz.co/blog/optuna-and-wandb/</guid>
+      <guid>https://h4pz.co/blog/optuna-and-wandb/</guid>
       <description>How to use weights and biases with optuna?</description>
     </item>
     <item>
       <title>Docker</title>
-      <link>https://www.h4pz.co/blog/docker/</link>
+      <link>https://h4pz.co/blog/docker/</link>
       <pubDate>Sun, 13 Aug 2023 20:39:09 +0200</pubDate>
-      <guid>https://www.h4pz.co/blog/docker/</guid>
+      <guid>https://h4pz.co/blog/docker/</guid>
       <description>Docker info dump</description>
     </item>
     <item>
       <title>Change Default Browser</title>
-      <link>https://www.h4pz.co/blog/change-default-browser/</link>
+      <link>https://h4pz.co/blog/change-default-browser/</link>
       <pubDate>Fri, 11 Aug 2023 22:37:45 +0200</pubDate>
-      <guid>https://www.h4pz.co/blog/change-default-browser/</guid>
+      <guid>https://h4pz.co/blog/change-default-browser/</guid>
       <description>How to change the default web browser in Manjaro bspwm?</description>
     </item>
     <item>
       <title>My First Post</title>
-      <link>https://www.h4pz.co/blog/my-first-post/</link>
+      <link>https://h4pz.co/blog/my-first-post/</link>
       <pubDate>Fri, 21 Jul 2023 23:07:23 +0200</pubDate>
-      <guid>https://www.h4pz.co/blog/my-first-post/</guid>
+      <guid>https://h4pz.co/blog/my-first-post/</guid>
       <description>$ y = mx + b $</description>
     </item>
   </channel>
