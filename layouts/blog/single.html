@@ -1,10 +1,4 @@
 {{ define "main" }}
-  <meta property="og:title" content="{{ .Params.title }}" />
-  <meta property="og:description" content="{{ .Params.summary }}" />
-  <meta property="og:image" content="{{ .Params.thumbnail | absURL }}" />
-  <meta property="og:url" content="{{ .Permalink }}" />
-  <meta property="og:type" content="article" />
-
 <div class="content">
   <div class="meta-data-container">{{ dateFormat "Monday, Jan 2, 2006" .Date }}</div>
   <div ><h3>{{ .Title }}</h3></div>
