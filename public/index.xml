@@ -6,7 +6,7 @@
     <description>Recent content on h4pZ</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 17 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 24 Mar 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://h4pz.co/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ABOUT</title>
@@ -14,6 +14,13 @@
       <pubDate>Mon, 24 Jul 2023 21:13:57 +0200</pubDate>
       <guid>https://h4pz.co/about/</guid>
       <description>&lt;hr&gt;&#xA;&lt;p&gt;ai, the wired and shell ghosts&lt;/p&gt;&#xA;&lt;hr&gt;</description>
+    </item>
+    <item>
+      <title>My Setup</title>
+      <link>https://h4pz.co/blog/setup/</link>
+      <pubDate>Mon, 24 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://h4pz.co/blog/setup/</guid>
+      <description>My dev setup</description>
     </item>
     <item>
       <title>Rosé Pine Matplotlib Theme</title>
