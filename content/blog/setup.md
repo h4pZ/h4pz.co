@@ -22,7 +22,7 @@ For the OS I'm dual booting between arch linux and windows 11. Although 99% of t
 - [tmux](https://github.com/tmux/tmux/wiki): terminal multiplexer
 - [nvim](https://github.com/neovim/neovim): text editor
 
-![arch_linux_setup](/images/blog/setup/arch_setup.webp "Arch Linux Desktop")
+![arch_linux_setup](/images/blog/setup/arch_setup.png "Arch Linux Desktop")
 
 ## HARDWARE
 
