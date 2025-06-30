@@ -92,6 +92,20 @@ MAIN SITE
   vertical-align: middle;
 }
 
+.social-icons li button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 2px;
+  color: var(--socials-color);
+  transition: color 0.3s ease;
+}
+
+.social-icons li button:hover {
+  color: var(--primary-color);
+}
+
 .footer-socials {
   display: flex;
   padding: 0;

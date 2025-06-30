@@ -38,3 +38,19 @@
 #navbar p a:hover {
   color: var(--secondary-color);
 }
+
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+  color: var(--socials-color);
+}
+
+#theme-toggle:hover {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+}

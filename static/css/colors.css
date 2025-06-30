@@ -8,3 +8,14 @@
   --link-color: #96c4d8;
   --link-hover-color: #e6a4fc;
 }
+
+[data-theme="light"] {
+  --background-color: #ffffff;
+  --default-text-color: #2d2d2d;
+  --primary-color: #2d4c47;
+  --secondary-color: #d6004f;
+  --tertiary-color: #6b5f62;
+  --socials-color: #666666;
+  --link-color: #2c5f7a;
+  --link-hover-color: #8b4fb3;
+}
