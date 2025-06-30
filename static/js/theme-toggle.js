@@ -9,32 +9,32 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
     }
     
-    // Check for saved theme preference or default to 'dark'
-    const currentTheme = localStorage.getItem('theme') || 'dark';
+    // Check for saved theme preference or default to 'light'
+    const currentTheme = localStorage.getItem('theme') || 'light';
     
     // Apply the current theme
-    if (currentTheme === 'light') {
-        body.setAttribute('data-theme', 'light');
-        themeToggle.textContent = '🌙';
+    if (currentTheme === 'dark') {
+        body.setAttribute('data-theme', 'dark');
+        themeToggle.textContent = '☀️';
     } else {
         body.removeAttribute('data-theme');
-        themeToggle.textContent = '☀️';
+        themeToggle.textContent = '🌙';
     }
     
     // Theme toggle click handler
     themeToggle.addEventListener('click', function() {
         const currentTheme = body.getAttribute('data-theme');
         
-        if (currentTheme === 'light') {
-            // Switch to dark theme
-            body.removeAttribute('data-theme');
-            themeToggle.textContent = '☀️';
-            localStorage.setItem('theme', 'dark');
-        } else {
+        if (currentTheme === 'dark') {
             // Switch to light theme
-            body.setAttribute('data-theme', 'light');
+            body.removeAttribute('data-theme');
             themeToggle.textContent = '🌙';
             localStorage.setItem('theme', 'light');
+        } else {
+            // Switch to dark theme
+            body.setAttribute('data-theme', 'dark');
+            themeToggle.textContent = '☀️';
+            localStorage.setItem('theme', 'dark');
         }
     });
 });
