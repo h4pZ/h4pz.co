@@ -35,8 +35,8 @@ For the OS I'm dual booting between arch linux and windows 11. Although 99% of t
 - corsair hx100i 1000w
 - fractal north case
 
-![desktop](/images/blog/setup/desktop.JPEG "Desktop PC")
-![fractal case](/images/blog/setup/fractal.jpeg "Fractal North Case")
+![desktop](/images/blog/setup/desktop.JPEG "Desktop PC build with RTX 4080 and custom loop cooling")
+![fractal case](/images/blog/setup/fractal.jpeg "Fractal North PC case with wooden front panel")
 
 ## PERIPHERALS
 - asus 27" rog swift pg279qm
@@ -49,10 +49,10 @@ For the OS I'm dual booting between arch linux and windows 11. Although 99% of t
 - xbox elite controller
 
 
-![Asus Monitor](/images/blog/setup/monitor.JPEG "Asus Monitor")
-![Headphones](/images/blog/setup/audio.JPEG "Headphones")
-![Keyboard 01](/images/blog/setup/kb_01.JPEG "Keyboard")
-![Keyboard 02](/images/blog/setup/kb_02.JPEG "Keyboard 02")
-![Mouse](/images/blog/setup/mouse_01.JPEG "Mouse")
-![Xbox Controller](/images/blog/setup/xbox_elite.JPEG "Xbox Controller")
+![Asus Monitor](/images/blog/setup/monitor.JPEG "ASUS ROG Swift PG279QM 27-inch gaming monitor")
+![Headphones](/images/blog/setup/audio.JPEG "Beyerdynamic DT 1990 Pro headphones with Schiit audio stack")
+![Keyboard 01](/images/blog/setup/kb_01.JPEG "Wooting 60HE mechanical keyboard with custom keycaps")
+![Keyboard 02](/images/blog/setup/kb_02.JPEG "Close-up view of Wooting 60HE keyboard switches and keycaps")
+![Mouse](/images/blog/setup/mouse_01.JPEG "Razer Viper Mini Signature gaming mouse on artisan mousepad")
+![Xbox Controller](/images/blog/setup/xbox_elite.JPEG "Xbox Elite wireless controller for gaming")
 

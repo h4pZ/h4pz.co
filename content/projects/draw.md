@@ -9,16 +9,16 @@ Draw is a model that recreates the mechanism of attention done by humans. This m
 
 Note: I used only a single channel for the DRAW model on the random glitch image.
 
-![img](/images/projects/draw/glitch.jpg)
-![img](/images/projects/draw/raven.jpg)
-![img](/images/projects/draw/DKdNSxFXUAA2wEf.gif)
-![img](/images/projects/draw/smallraven_1096000.gif)
+![img](/images/projects/draw/glitch.jpg "Original glitch artwork image with digital distortion effects and abstract patterns")
+![img](/images/projects/draw/raven.jpg "Original black and white photograph of a raven by Laura Makabresku")
+![img](/images/projects/draw/DKdNSxFXUAA2wEf.gif "DRAW model animation showing step-by-step reconstruction of the glitch image with attention mechanism")
+![img](/images/projects/draw/smallraven_1096000.gif "DRAW model final training stage animation showing complete reconstruction of the raven image")
 
 # Bonus gifs
 
 The following gifs corresponds to different stages of the training of the raven picture.
 
-![img](/images/projects/draw/asdasd.gif)
-![img](/images/projects/draw/smallraven_554000.gif)
-![img](/images/projects/draw/smallraven_600000.gif)
-![img](/images/projects/draw/smallraven_1096000.gif)
+![img](/images/projects/draw/asdasd.gif "Early stage DRAW model training animation showing initial attempts at reconstructing the raven image")
+![img](/images/projects/draw/smallraven_554000.gif "Mid-stage DRAW model training animation at 554,000 iterations showing improved raven reconstruction")
+![img](/images/projects/draw/smallraven_600000.gif "Advanced stage DRAW model training animation at 600,000 iterations showing refined raven reconstruction")
+![img](/images/projects/draw/smallraven_1096000.gif "Final stage DRAW model training animation at 1,096,000 iterations showing complete raven reconstruction")

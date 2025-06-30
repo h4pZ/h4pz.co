@@ -13,8 +13,8 @@ The objective of this project/course work for CADL was to explore two styling te
 
 The idea behind Deep Dream is that when you have a neural network trained on images you can visualize what would make an image more appealing to certain parts of the network, adding the gradient of a specific part of a network with respect to the original input. This technique exalts features that maximizes an activation given an image. For this exploration I used the neuron that represented the probability of an image being a jellyfish and added the gradient to the input. The first gif to the right is the input image plus a small portion of the gradient over time as a feedback loop. The second gif is the same idea but this time the image is cropped at every margin and resized to match the original dimensions, giving the sensation of zooming in.
 
-![softmax](/images/projects/deep-dream/softmax.gif)
-![fractal](/images/projects/deep-dream/fractal.gif)
+![softmax](/images/projects/deep-dream/softmax.gif "Deep Dream softmax animation showing iterative enhancement of jellyfish-like features in the input image")
+![fractal](/images/projects/deep-dream/fractal.gif "Deep Dream fractal zoom animation showing recursive pattern generation with cropping and resizing")
 
 # guided hallucination
 
@@ -25,20 +25,20 @@ In this case I define the dream as the first image of our subjects and the guide
     NOTE: For all the images the negative gradient of the pixel similarity loss is added.
 
 
-![fractal](/images/projects/deep-dream/guided.gif)
-![fractal](/images/projects/deep-dream/guided2.gif)
-![fractal](/images/projects/deep-dream/guided_dot_notv.gif)
-![fractal](/images/projects/deep-dream/guided_l1.gif)
-![fractal](/images/projects/deep-dream/guided_l2.gif)
-![fractal](/images/projects/deep-dream/guided_l1_-fl.gif)
-![fractal](/images/projects/deep-dream/guided_l2_-fl.gif)
+![fractal](/images/projects/deep-dream/guided.gif "Guided hallucination animation using dot product similarity showing dream-guide transformation")
+![fractal](/images/projects/deep-dream/guided2.gif "Guided hallucination animation with second subject as dream using dot product similarity")
+![fractal](/images/projects/deep-dream/guided_dot_notv.gif "Guided hallucination animation using only dot product similarity loss without pixel loss")
+![fractal](/images/projects/deep-dream/guided_l1.gif "Guided hallucination animation using L1 norm showing gradient enhancement effects")
+![fractal](/images/projects/deep-dream/guided_l2.gif "Guided hallucination animation using L2 norm showing gradient enhancement effects")
+![fractal](/images/projects/deep-dream/guided_l1_-fl.gif "Guided hallucination animation using negative L1 norm gradient with pixel similarity loss")
+![fractal](/images/projects/deep-dream/guided_l2_-fl.gif "Guided hallucination animation using negative L2 norm gradient with pixel similarity loss")
 
 
 # style transfer
 
 Style transfer is a technique that leverages on the idea that the furthest a layer is, the more it represents the style and particular features of an image and the earlier they are the more it represents content. In this case, we define two images, one which is going to transfer its style to the other. In this case like the one before, two losses are defined. A content loss and a style loss. The content loss is defined as an earlier layer of the network while the style loss is defined as one of the latest layers. To the right I present the style transfer between the first painting of Kim into the photograph of Carol Pinzon with different weights for the losses.
 
-![fractal](/images/projects/deep-dream/stylenet.gif)
-![fractal](/images/projects/deep-dream/stylenet-c.gif)
+![fractal](/images/projects/deep-dream/stylenet.gif "Style transfer animation showing Kim's painting style being applied to Carol Pinzon's photograph")
+![fractal](/images/projects/deep-dream/stylenet-c.gif "Style transfer animation with different loss weights showing artistic style transformation progression")
 
 

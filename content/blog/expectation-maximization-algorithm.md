@@ -89,7 +89,7 @@ There is no guarantee that the EM algorithm will end up in a local maximum.
 
 The proof that maximizing the expected log-likelihood of the complete data also improves the log-likelihood of the data given the model parameters can be found in Wikipedia (TLDR: the expected log-likelihood of the complete data is a lower bound of the log-likelihood of the observed data)
 
-![fitting image](/images/blog/em-algo/fitting.gif)
+![fitting image](/images/blog/em-algo/fitting.gif "Animation showing EM algorithm fitting process with data points and evolving cluster boundaries")
 
 ```python
 

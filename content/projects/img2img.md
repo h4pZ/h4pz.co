@@ -9,6 +9,6 @@ Image to image translation is part of what is known as cross-domain knowledge. T
 
 # results
 
-![img](/images/projects/img2img/comp.png)
-![img](/images/projects/img2img/sculpt.png)
+![img](/images/projects/img2img/comp.png "Comparison grid showing face-to-sculpture translation results using CycleGAN model")
+![img](/images/projects/img2img/sculpt.png "Sculpture-to-face translation results showing the 'vaporwave' filter effect achieved by the model")
 

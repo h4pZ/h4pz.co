@@ -42,11 +42,11 @@ $$p(\theta, \mathbf{z} | \mathbf{w}, \alpha, \beta)=\frac{p(\theta, \mathbf{z}, 
 Unfortunately this distribution is intractable. So a variational Bayesian method is used. This takes a simpler distribution to approximate it. The graphical representation of the variational distribution can bee seen in Figure 2.
 
 $$q(\theta, \mathbf{z} | \gamma, \varphi)=q(\theta | \gamma) \prod_{n=1}^{N} q\left(z_{n} | \varphi_{n}\right)$$
-![img](/images/projects/dota2/lda_gm.png)
+![img](/images/projects/dota2/lda_gm.png "Graphical model representation of the Latent Dirichlet Allocation (LDA) model showing plates and variables")
 
 <span class="figure-caption">Figure 1: Graphical model representation of the LDA model</span>
 
-![img](/images/projects/dota2/var_dist.png)
+![img](/images/projects/dota2/var_dist.png "Graphical model representation of the variational distribution used to approximate the posterior in LDA")
 
 <span class="figure-caption">Figure 2: Graphical model representation of the variational distribution used toapproximate the posterior in LDA</span>
 
@@ -59,20 +59,20 @@ The data used in this project comes from a kaggle dataset [6] which was collecte
 
 As Dota 2 is an online multiplayer game, any player from around the world can take part of the experience. Thus, Dota 2 text messages can come from any language or even a mixture of them. For example, combinations of Spanish and English are not uncommon in the Americas region (from personal experience). This is important because the model used to measure toxicity in this work supports mostly English as the default language. So, as part of the preprocessing the language for each text message was inferred and tagged as a new feature in the dataset. The distribution of the top 20 languages can be seen in Figure 7. The most used languages in the game are English and Russian. So the first preprocessing step was to remove all the languages that weren’t tagged as English. The second step on the preprocessing step consisted of removing stop words, non alpha-numerical words and words that were shorter than 3 letters.
 
-![img](/images/projects/dota2/message_distribution_per_match.png)
+![img](/images/projects/dota2/message_distribution_per_match.png "Bar chart showing distribution of chat messages per Dota 2 match, with most matches having under 250 messages")
 <span class="figure-caption">Figure 3: Message distribution per match</span>
 
-![img](/images/projects/dota2/message_distribution_per_player_slot.png)
+![img](/images/projects/dota2/message_distribution_per_player_slot.png "Bar chart showing uniform distribution of chat messages across all 10 player slots in Dota 2 matches")
 <span class="figure-caption">Figure 4: Message distribution per player slot</span>
 
-![img](/images/projects/dota2/message_length_distribution.png)
+![img](/images/projects/dota2/message_length_distribution.png "Histogram showing distribution of message lengths in Dota 2 chat, with most messages being 20 characters or less")
 <span class="figure-caption">Figure 5: Message length distribution</span>
 
-![img](/images/projects/dota2/message_distribution_time.png)
+![img](/images/projects/dota2/message_distribution_time.png "Line graph showing message frequency over match duration, with spikes at game start and gradual increase as game progresses")
 <span class="figure-caption">Figure 6: Message distribution over match length</span>
 
 
-![img](/images/projects/dota2/language_distribution.png)
+![img](/images/projects/dota2/language_distribution.png "Bar chart showing top 20 languages used in Dota 2 chat, with English and Russian being the most common")
 <span class="figure-caption">Figure 7: Language distribution of messages</span>
 
 # Method
