@@ -103,9 +103,14 @@ MAIN SITE
   overflow: auto;
 }
 
-.social-icons li a img {
-  max-width: 18px;
+.social-icons li a svg {
+  fill: var(--socials-color);
+  transition: fill 0.3s ease;
   vertical-align: middle;
+}
+
+.social-icons li a:hover svg {
+  fill: var(--primary-color);
 }
 
 .social-icons li button {
