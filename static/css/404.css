@@ -15,18 +15,23 @@
 
 h1 {
   font-size: 20px;
-  letter-spacing: 4px;
+  letter-spacing: 2px;
+  color: var(--primary-color);
 }
 
 a {
-  color: #82AAED;
+  color: var(--link-color);
   text-decoration: none;
-  letter-spacing: 4px;
+  letter-spacing: 2px;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--link-hover-color);
 }
 
 .notfound h1,
 .notfound a {
-  letter-spacing: 4px;
+  letter-spacing: 2px;
   padding: 20px 0;
-  /* Adjust as needed */
 }

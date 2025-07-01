@@ -16,14 +16,10 @@
   /* Center the title below the image */
 }
 
-.project-entry .entry-title {
-  transition: all 0.50s ease;
-
-}
 
 .project-entry:hover .entry-title {
   color: var(--secondary-color);
-  !important;
+ !important;
 }
 
 .project-thumbnail {

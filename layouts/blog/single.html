@@ -1,8 +1,9 @@
 {{ define "main" }}
+<link rel="stylesheet" href="/css/blog.css">
 <div class="content">
   <div class="meta-data-container">{{ dateFormat "Monday, Jan 2, 2006" .Date }}</div>
-  <div ><h3>{{ .Title }}</h3></div>
-  <div >{{ .Content }}</div>
+  <div><h3>{{ .Title }}</h3></div>
+  <div>{{ .Content }}</div>
 </div>
 {{ end }}
 

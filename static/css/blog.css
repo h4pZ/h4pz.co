@@ -1,11 +1,6 @@
 /*
 * BLOG
 */
-.entry-title {
-  color: var(--primary-color);
-  transition: all 0.50s ease;
-  text-transform: uppercase;
-}
 
 .blog-card {
   list-style: none;
@@ -21,7 +16,7 @@
 
 .blog-card:hover .entry-title {
   color: var(--secondary-color);
-  !important;
+ !important;
 }
 
 .blog-card a {
