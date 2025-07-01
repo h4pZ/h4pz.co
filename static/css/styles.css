@@ -82,6 +82,7 @@ MAIN SITE
   align-items: flex-start;
   padding: 20px;
   text-align: left;
+  transform: scale(1.25);
 }
 
 .social-icons {
@@ -243,7 +244,7 @@ METADATA CONTAINER FOR THE INFO LIKE DATE AND TAGS FOR THE BLOG LIST
 /*
 MEDIA QUERY: FOR THE TABLET
 */
-@media screen and (max-width: 699px) {
+@media screen and (max-width: 1120px) {
   .row {
     flex-direction: column;
   }
@@ -259,6 +260,10 @@ MEDIA QUERY: FOR THE TABLET
     object-fit: cover;
     position: absolute;
     border: 0;
+  }
+
+  #rightinfo {
+    transform: scale(1);
   }
 
 }
