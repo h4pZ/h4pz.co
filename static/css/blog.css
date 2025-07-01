@@ -16,8 +16,7 @@
 }
 
 .blog-card:hover {
-  background-color: rgba(172, 230, 209, 0.15);
-  /* Light blue with 30% opacity */
+  background-color: color-mix(in srgb, var(--primary-color) 15%, transparent);
 }
 
 .blog-card:hover .entry-title {
