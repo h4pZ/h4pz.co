@@ -1,16 +1,16 @@
 <nav id="navbar">
     <div class="articles">
         <article class="section">
-            <p><a href="{{ "" | relURL }}" {{ if eq .RelPermalink "/" }}class="current"{{ end }}>H4PZ</a></p>
+            <p><a href="{{ "" | absURL }}" {{ if eq .RelPermalink "/" }}class="current"{{ end }}>H4PZ</a></p>
         </article>
         <article class="section">
-            <p><a href="{{ "projects" | relURL }}" {{ if eq .RelPermalink "/projects/" }}class="current"{{ end }}>PROJECTS</a></p>
+            <p><a href="{{ "projects" | absURL }}" {{ if eq .RelPermalink "/projects/" }}class="current"{{ end }}>PROJECTS</a></p>
         </article>
         <article class="section">
-            <p><a href="{{ "blog" | relURL }}" {{ if eq .RelPermalink "/blog/" }}class="current"{{ end }}>BLOG</a></p>
+            <p><a href="{{ "blog" | absURL }}" {{ if eq .RelPermalink "/blog/" }}class="current"{{ end }}>BLOG</a></p>
         </article>
         <article class="section">
-            <p><a href="{{ "about" | relURL }}" {{ if eq .RelPermalink "/about/" }}class="current"{{ end }}>ABOUT</a></p>
+            <p><a href="{{ "about" | absURL }}" {{ if eq .RelPermalink "/about/" }}class="current"{{ end }}>ABOUT</a></p>
         </article>
         <article class="section">
             <button id="theme-toggle" aria-label="Toggle theme">

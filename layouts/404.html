@@ -1,9 +1,29 @@
-{{ define "main" }}
-<link rel="stylesheet" href="/css/404.css">
-<div class="notfound">
-    <img src="/images/404.png" alt="404 error page illustration with Lain character" class="full">
-    <h1>PAGE NOT FOUND</h1>
-    <a href="{{ "" | relURL }}">Return to Home</a>
-</div>
-{{ end }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{ partial "head.html" . }}
+    <link rel="stylesheet" href="{{ "/css/404.css" | absURL }}">
+    <title>404 - Page Not Found</title>
+</head>
+<body class="page-with-navbar">
+    <header>
+        {{ partial "nav.html" . }}
+    </header>
+    
+    <main>
+        <div class="notfound">
+            <img src="{{ "/images/404.png" | absURL }}" alt="404 error page illustration with Lain character" class="full">
+            <h1>PAGE NOT FOUND</h1>
+            <a href="{{ "" | relURL }}">Return to Home</a>
+        </div>
+    </main>
+
+    <footer>
+    </footer>
+    
+    <script src="{{ "/js/theme-toggle.js" | absURL }}"></script>
+</body>
+</html>
 
