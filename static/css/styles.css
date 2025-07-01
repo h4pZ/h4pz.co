@@ -88,16 +88,21 @@ MAIN SITE
 .social-icons {
   display: flex;
   padding: 0;
-  margin: 0;
+  padding-left: 10px;
+  margin: 10px 0 0 0;
   list-style: none;
+  align-items: center;
+  min-height: 24px;
+  -webkit-padding-start: 0;
+  -moz-padding-start: 0;
+  padding-inline-start: 0;
 }
 
 .social-icons li {
   margin-left: 12px;
 }
 
-.articles,
-.social-icons {
+.articles {
   display: flex;
   align-items: center;
   overflow: auto;
@@ -107,13 +112,18 @@ MAIN SITE
   fill: var(--socials-color);
   transition: fill 0.3s ease;
   vertical-align: middle;
+  display: block;
 }
 
 .social-icons li a:hover svg {
   fill: var(--primary-color);
 }
 
-.social-icons li button {
+.theme-toggle-container {
+  margin-left: 12px;
+}
+
+.theme-toggle-container button {
   background: none;
   border: none;
   cursor: pointer;
@@ -125,13 +135,13 @@ MAIN SITE
   color: var(--socials-color);
 }
 
-.social-icons li button svg {
+.theme-toggle-container button svg {
   color: inherit;
   stroke: currentColor;
   transform: translateY(-2.5px);
 }
 
-.social-icons li button:hover {
+.theme-toggle-container button:hover {
   color: var(--primary-color);
 }
 
