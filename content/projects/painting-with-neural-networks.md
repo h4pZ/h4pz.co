@@ -5,7 +5,7 @@ draft: false
 thumbnail: "/images/projects/painting-with-neural-networks/metalhead.jpg"
 ---
 
-This project was born as one of my first course work for the  Creative Applications of Deep Learning  course on Kadenze (which I recommend). The idea of this project was to train a function that maps points (x, y) regarding the location of a pixel in R2, to a point (R, G, B) corresponding to the values of each channel in the pixel.
+This project was born as one of my first course works for the  Creative Applications of Deep Learning  course on Kadenze (which I recommend). The idea of this project was to train a function that maps points (x, y) regarding the location of a pixel in R2, to a point (R, G, B) corresponding to the values of each channel in the pixel.
 <!--more-->
  
 

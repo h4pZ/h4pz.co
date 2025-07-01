@@ -135,7 +135,7 @@ This is the optimization problem that Optuna is going to solve.
 
 ## Problem
 
-In order to create a parallel coordiante plot on WandB for a project, one needs to have several runs of an experiment. This is not a problem since each Optuna trial can be logged as a run (this is done by setting `reinit=True`in `wandb.init()` on the `__call__`method). However, with this setup so far it's impossible to have a history of the parameters and mse over the study. This happens because each WandB run only contains one observation, so WandB will only be able to show one data point on its line plots (this will make the line plots default into a bar plot).
+In order to create a parallel coordinate plot on WandB for a project, one needs to have several runs of an experiment. This is not a problem since each Optuna trial can be logged as a run (this is done by setting `reinit=True`in `wandb.init()` on the `__call__`method). However, with this setup so far it's impossible to have a history of the parameters and mse over the study. This happens because each WandB run only contains one observation, so WandB will only be able to show one data point on its line plots (this will make the line plots default into a bar plot).
 
 ## Solution
 

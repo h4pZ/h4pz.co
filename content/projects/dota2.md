@@ -48,7 +48,7 @@ $$q(\theta, \mathbf{z} | \gamma, \varphi)=q(\theta | \gamma) \prod_{n=1}^{N} q\l
 
 ![img](/images/projects/dota2/var_dist.png "Graphical model representation of the variational distribution used to approximate the posterior in LDA")
 
-<span class="figure-caption">Figure 2: Graphical model representation of the variational distribution used toapproximate the posterior in LDA</span>
+<span class="figure-caption">Figure 2: Graphical model representation of the variational distribution used to approximate the posterior in LDA</span>
 
 
 # Data 
@@ -57,7 +57,7 @@ The data used in this project comes from a kaggle dataset [6] which was collecte
 
 ## Preprocessing
 
-As Dota 2 is an online multiplayer game, any player from around the world can take part of the experience. Thus, Dota 2 text messages can come from any language or even a mixture of them. For example, combinations of Spanish and English are not uncommon in the Americas region (from personal experience). This is important because the model used to measure toxicity in this work supports mostly English as the default language. So, as part of the preprocessing the language for each text message was inferred and tagged as a new feature in the dataset. The distribution of the top 20 languages can be seen in Figure 7. The most used languages in the game are English and Russian. So the first preprocessing step was to remove all the languages that weren’t tagged as English. The second step on the preprocessing step consisted of removing stop words, non alpha-numerical words and words that were shorter than 3 letters.
+As Dota 2 is an online multiplayer game, any player from around the world can take part in the experience. Thus, Dota 2 text messages can come from any language or even a mixture of them. For example, combinations of Spanish and English are not uncommon in the Americas region (from personal experience). This is important because the model used to measure toxicity in this work supports mostly English as the default language. So, as part of the preprocessing the language for each text message was inferred and tagged as a new feature in the dataset. The distribution of the top 20 languages can be seen in Figure 7. The most used languages in the game are English and Russian. So the first preprocessing step was to remove all the languages that weren’t tagged as English. The second step on the preprocessing step consisted of removing stop words, non alpha-numerical words and words that were shorter than 3 letters.
 
 ![img](/images/projects/dota2/message_distribution_per_match.png "Bar chart showing distribution of chat messages per Dota 2 match, with most matches having under 250 messages")
 <span class="figure-caption">Figure 3: Message distribution per match</span>
@@ -130,7 +130,7 @@ Stage: Late Game
     Topic 2: report, game, team, fucking, fuck, pls, pudge, easy, lol, rofl
     Topic 3: commend, shit, good, end, guys, trash, come, thanks, noob, pick
 
-Using these words, the toxicity stage score was calculated for each stage. The early game got a toxicity stage score of 0.1690, the mid game got a scoreof 0.1931 and the late game got a score of 0.1789.
+Using these words, the toxicity stage score was calculated for each stage. The early game got a toxicity stage score of 0.1690, the mid game got a score of 0.1931 and the late game got a score of 0.1789.
 
 # Discussion
 ## Stages topics
@@ -146,7 +146,7 @@ The toxicity stage scores presented in the results section contradicts the hypot
 The results presented above should be taken with care since the methodology introduced several assumptions that might influence the representation of toxicity in the stages of the game. The first problem with the approach is the usage of the Naive Bayes filter to detect the language of the documents. This is because some texts might be a mixture of languages and only one of those were selected by the application. This will introduce noise into the dataset. The second limitation of the methodology was the data split used to select the data for the early, mid and late game. Dividing the stages of the game into the bins created by the tertiles is a practical approach but that might not necessarily represent the actual stages. Some documents from one stage might leak to another stage and viceversa, the behaviour of this will depend on the actual distribution of the stages which is unknown. Another limitation of the methodology is the limited hyperparameter space of the grid-search. The repercussions of this can be easily seen in the topics of the mid game, where all of them seem to be the same. So, a bigger hyperparameter space that contained more alternatives for the number of topics and n-grams could potentially have generated better topics. However, there is a time and hardware constraints that limits the hyperparameter spaces that can be explored. The next assumption that might bias the results is assuming that the top 10 words are a good representation of each topic. This might not be the case and it all depends on the actual distribution of the words over the topics. Finally, at the core of the toxicity score, lives the usage of the PerspectiveAPI, which is assumed to be able to determine the actual toxicity of the words in a Dota 2 context. This is a hard assumption to make, but it guarantees that the toxicity measure for the words is as impartial as possible.
 # Conclusion
 
-From the results of this project, it can be concluded that my prior hypothes that the early and late game are more toxic than the mid game is potentially false. In fact, the mid game seems to be more toxic than the other two stages. Given the results, the mid game is the most toxic stage, followed by the late game and finally by the early game. These results must be taken with care and should be used as a first approximation or exploratory analysis of the text chat toxicity distribution over time of Dota 2 games.
+From the results of this project, it can be concluded that my prior hypothesis that the early and late game are more toxic than the mid game is potentially false. In fact, the mid game seems to be more toxic than the other two stages. Given the results, the mid game is the most toxic stage, followed by the late game and finally by the early game. These results must be taken with care and should be used as a first approximation or exploratory analysis of the text chat toxicity distribution over time of Dota 2 games.
 
 # References
 
