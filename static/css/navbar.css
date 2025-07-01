@@ -5,6 +5,12 @@
   justify-content: center;
   /* Center the navbar contents horizontally */
   padding: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--background-color);
+  z-index: 100;
 }
 
 .articles {
@@ -59,4 +65,42 @@
 
 #theme-toggle:hover {
   color: var(--secondary-color);
+}
+
+/* Add top margin only to pages with navbar */
+body:has(#navbar) {
+  padding-top: 140px;
+}
+
+/* Alternative approach for browsers that don't support :has() */
+.page-with-navbar {
+  padding-top: 140px;
+}
+
+/* Ensure main content areas have proper spacing */
+.page-with-navbar main,
+.page-with-navbar .content {
+  margin-top: 0;
+}
+
+/* Mobile-specific navbar fixes */
+@media screen and (max-width: 1120px) {
+  #navbar {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 1000 !important;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .page-with-navbar {
+    padding-top: 100px !important;
+  }
+  
+  #navbar .articles {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
