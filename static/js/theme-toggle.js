@@ -15,10 +15,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Apply the current theme
     if (currentTheme === 'dark') {
         body.setAttribute('data-theme', 'dark');
-        themeToggle.textContent = '☀️';
     } else {
         body.removeAttribute('data-theme');
-        themeToggle.textContent = '🌙';
     }
     
     // Theme toggle click handler
@@ -28,12 +26,10 @@ document.addEventListener('DOMContentLoaded', function() {
         if (currentTheme === 'dark') {
             // Switch to light theme
             body.removeAttribute('data-theme');
-            themeToggle.textContent = '🌙';
             localStorage.setItem('theme', 'light');
         } else {
             // Switch to dark theme
             body.setAttribute('data-theme', 'dark');
-            themeToggle.textContent = '☀️';
             localStorage.setItem('theme', 'dark');
         }
     });

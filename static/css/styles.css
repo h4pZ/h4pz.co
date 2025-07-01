@@ -95,11 +95,19 @@ MAIN SITE
 .social-icons li button {
   background: none;
   border: none;
-  font-size: 16px;
   cursor: pointer;
   padding: 2px;
-  color: var(--socials-color);
   transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--socials-color);
+}
+
+.social-icons li button svg {
+  color: inherit;
+  stroke: currentColor;
+  transform: translateY(-2.5px);
 }
 
 .social-icons li button:hover {
