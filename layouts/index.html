@@ -41,8 +41,12 @@
 
     document.addEventListener('DOMContentLoaded', function() {
         var img = document.getElementById('randomImage');
+        var column = img.parentElement;
         var randomIndex = Math.floor(Math.random() * images.length);
-        img.src = '/images/left_column/' + images[randomIndex];
+        var imagePath = '/images/left_column/' + images[randomIndex];
+        
+        img.src = imagePath;
+        column.style.setProperty('--bg-image', 'url(' + imagePath + ')');
     });
     </script>
     <script src="/js/theme-toggle.js"></script>
