@@ -23,13 +23,13 @@ In this section the two methods used to developed this project are going to be b
 
 The Naive Bayes Classifier is a machine learning model that uses the Bayes Rule to classify observations. The setting of the classifier is as follows: $C$ is a set of possible classes, $V$ is a set of possible words, $P(c)$ is the probabilities that specify how likely it is for a document to belong to class $c$ and $p(w|c)$ contains the probabilities that specify how likely it is for a document to contain the word $w$, given that the document belongs to class $c$ (one probability for each class-word pair). The classifier assigns a class $c$ to the word $w$ following this rule:
 
-$$\hat{C} = argmax_{c \in C} P(c) \prod_{w\in V} P(w|c)^{\(w)}$$
+$$\hat{C} = \arg\max_{c \in C} P(c) \prod_{w\in V} P(w|c)^{N(w)}$$
 
 ## latent dirichlet allocation
 
 Latent Dirichlet Allocatoin (LDA) [[3]](#ref-3) is a generative statistical model for collections of discrete data such as text corpora. The generative process of LDA is as follows:
 
-1.    Choose $N \sim Poisson(\eta)$
+1.    Choose $N \sim \text{Poisson}(\eta)$
 2.    Choose $\theta \sim Dir(\alpha)$
 3.    For each of the $N$ words $w_n$
         - Choose a topic $z_n \sim Multinomial(\theta)$
@@ -92,19 +92,19 @@ For each of the stages datasets (early, mid, late) a LDA model was trained using
 
 Once each model is trained, a toxicity score is given to each one of the stages. The score is calculated the following way. First, each model has a set of $K$ topics (notice that each model might have a different number of topics selected by the grid-search procedure), and the topics are related with all the words in the vocabulary in the LDA model through the variational parameter $\varphi$. This variational parameter is saved under the components_ attribute of the scikit-learn model and is a $K \times N$ matrix. Each word is assigned a toxic value $t(w)=P(toxic | w)$ which is the probability of a word being toxic. This toxic value is obtained using the PerspectiveAPI [[5]](#ref-5) which is an application built by Jigsaw and Google that can assign the probability of a piece of text being toxic. Since each word has a different distribution depending on the topic, the variational parameter $\varphi$ is normalized as suggested in the scikit-learn documentation and used as a distribution over the words for each topic. This normalized parameter $\bar{\varphi}_{ij}$ is the probability of the word $i$ appearing in the topic $j$. Thus, a topic toxic score (TTS) is defined as:
 
-$$\text{Topic Toxic Score}_j = \sum_n^N t(w^n) {\bar{\varphi}}_{nj}$$
+$$\text{TTS}_j = \sum_{n=1}^N t(w^n) \bar{\varphi}_{nj}$$
 
 Due to the sheer amount of words that each corpus for each stage can have (above 77.000 words) and the limitations that the PerspectiveAPI has in place for its API calls, only the top 10 words $W$ are taken into account in the calculation of the topic toxic score. The ranking of the words is done with respect to $\bar{\varphi}_{ij}$, so the higher the value the higher ranking it will have. Thus, the actual formula used in the calculations is:
 
-$$\text{Topic Toxic Score}_j = \sum_n \frac{t(w^n) {\bar{\varphi}}_{nj}}{\sum_n{\bar{\varphi}}_{nj}}, {n \in \mathcal{W}}$$
+$$\text{TTS}_j = \sum_{n \in W} \frac{t(w^n) \bar{\varphi}_{nj}}{\sum_{m \in W}\bar{\varphi}_{mj}}$$
 
 The final toxicity stage score is calculated using the variational document topic distribution $q(\theta | \gamma (\mathbf{w}))$ obtained from the optimization results of LDA. This distribution can be calculated using the method transform from the LDA class model in scikit-learn for a particular corpus $D$ (early, mid, late game). The resulting distribution is a $M \times K$ matrix where each row represents the probability of each topic in the given document $d$. The estimator $\hat{\theta}_{*j}$ is proposed as the average representation of the topic $j$ across a corpus.
 
 $$\hat{\theta}_{*j} = \frac{1}{M} \sum_d^M q(\theta_{dj} | \gamma (\mathbf{w}_d))$$
 
-With this, the toxicity stage score is defined as:
+With this, the toxicity stage score (TSS) is defined as:
 
-$$\text{ToxicityStageScore} = \sum_j^K \frac{\hat{\theta}_{*j} \times Topic Toxic Score_j}{\sum_j^K \hat{\theta}_{*j}}$$
+$$\text{TSS} = \sum_{j=1}^K \frac{\hat{\theta}_{*j} \times \text{TTS}_j}{\sum_{k=1}^K \hat{\theta}_{*k}}$$
 
 The above estimator for the toxicity of the stages of Dota 2 will be used as a measure to test the hypothesis in the introduction section.
 
