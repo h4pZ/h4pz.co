@@ -10,7 +10,7 @@
 
 body {
   background-color: var(--background-color);
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'IBM Plex Sans', sans-serif;
   font-weight: 500;
   margin: 0;
 }
@@ -58,6 +58,7 @@ MAIN SITE
 }
 
 .section p a {
+  font-family: 'IBM Plex Mono', monospace;
   text-transform: uppercase;
   color: var(--primary-color);
   font-weight: 700;
@@ -73,6 +74,7 @@ MAIN SITE
 }
 
 .socials {
+  font-family: 'IBM Plex Mono', monospace;
   color: var(--socials-color);
   letter-spacing: 8px;
   padding-left: 10px;
@@ -185,6 +187,7 @@ li {
 }
 
 h1 {
+  font-family: 'IBM Plex Mono', monospace;
   color: var(--primary-color);
   letter-spacing: 4px;
   text-decoration: none;
@@ -192,6 +195,7 @@ h1 {
 }
 
 h2 {
+  font-family: 'IBM Plex Mono', monospace;
   text-transform: uppercase;
   color: var(--secondary-color);
   letter-spacing: 4px;
@@ -199,6 +203,7 @@ h2 {
 }
 
 h3 {
+  font-family: 'IBM Plex Mono', monospace;
   text-transform: uppercase;
   color: var(--primary-color);
   letter-spacing: 4px;
@@ -252,6 +257,7 @@ img {
 * Project and blog entries
 */
 .entry-title {
+  font-family: 'IBM Plex Mono', monospace;
   color: var(--primary-color);
   transition: all 0.50s ease;
   text-transform: uppercase;
@@ -261,6 +267,7 @@ img {
 METADATA CONTAINER FOR THE INFO LIKE DATE AND TAGS FOR THE BLOG LIST
 */
 .meta-data-container {
+  font-family: 'IBM Plex Mono', monospace;
   color: var(--socials-color);
 }
 
@@ -275,6 +282,7 @@ METADATA CONTAINER FOR THE INFO LIKE DATE AND TAGS FOR THE BLOG LIST
 }
 
 .about-info h2 {
+  font-family: inherit;
   text-transform: none;
   color: var(--secondary-color);
   letter-spacing: 2px;

@@ -26,6 +26,7 @@
 }
 
 #navbar p a {
+  font-family: 'IBM Plex Mono', monospace;
   color: var(--socials-color);
   transition: color 0.3s;
   text-align: center;
