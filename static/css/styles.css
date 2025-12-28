@@ -1,5 +1,13 @@
 @import url("colors.css");
 
+@font-face {
+  font-family: 'Love Letter Typewriter';
+  src: url('/fonts/LoveLetterTypewriter.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   background-color: var(--background-color);
   font-family: 'IBM Plex Mono', monospace;
@@ -257,6 +265,47 @@ METADATA CONTAINER FOR THE INFO LIKE DATE AND TAGS FOR THE BLOG LIST
 }
 
 /*
+ * ABOUT INFO (Inside Right Column)
+ */
+.about-info {
+  font-family: 'Love Letter Typewriter', monospace;
+  padding-left: 10px;
+  margin: 20px 0;
+  font-size: 16px;
+}
+
+.about-info h2 {
+  text-transform: none;
+  color: var(--secondary-color);
+  letter-spacing: 2px;
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.about-info p {
+  color: var(--default-text-color);
+  line-height: 1.6;
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.about-info .ascii-decoration {
+  color: var(--socials-color);
+  letter-spacing: 0;
+  font-size: 14px;
+}
+
+.about-info a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.about-info a:hover {
+  color: var(--link-hover-color);
+}
+
+/*
 MEDIA QUERY: FOR THE TABLET
 */
 @media screen and (max-width: 1120px) {
@@ -267,6 +316,13 @@ MEDIA QUERY: FOR THE TABLET
   .column {
     width: 100%;
     height: auto;
+    flex: none;
+  }
+
+  .column:first-child {
+    height: 50vh;
+    min-height: 300px;
+    flex: 0 0 auto;
   }
 
   .column img.full {
@@ -281,4 +337,27 @@ MEDIA QUERY: FOR THE TABLET
     transform: scale(1);
   }
 
+  /* About info mobile adjustments */
+  .about-info {
+    margin: 15px 0;
+  }
+
+  .about-info h2 {
+    font-size: 1.1em;
+  }
+
+  .about-info p {
+    font-size: 0.95em;
+  }
+
+}
+
+/*
+MEDIA QUERY: FOR MOBILE ONLY
+*/
+@media screen and (max-width: 768px) {
+  .column:first-child {
+    height: 40vh;
+    min-height: 200px;
+  }
 }
