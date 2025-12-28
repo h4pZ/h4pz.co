@@ -9,6 +9,8 @@ summary: How to use weights and biases with optuna?
 
 ---
 
+[Weights and Biases][0] (WandB) is an experiment tracking, model optimization and dataset versioning tool. The cool thing about it is that the runs are stored on their cloud automatically. So, if you are training on a remote server, you just setup a few lines of code in your experiment and then you don't have to worry about getting back the results out of the instance before shutting it down. 
+
 
 This tool also allows you to do some hyperparameters sweeps. It comes with some predefined [algorithms][1] for this purpose. However, you might want to use an alternative method or library. In my case, I wanted to use [Optuna][2], which is a bayesian hyperparameter optimization framework. Unfortunately I couldn't find a single example on the web on how to do so. More specifically, I didn't find an example on how to run the study and get both the hyperparameter history and a parallel coordinate plot in WandB. So, that's what this blog entry is for.
 

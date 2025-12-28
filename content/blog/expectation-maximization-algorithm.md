@@ -5,6 +5,9 @@ draft: false
 thumbnail: "/images/blog/em-algo/thumbnail.png"
 summary: An expectation maximization example
 ---
+Expectation maximization as described by Bishop (2006) is:
+
+`a general technique for finding maximum likelihood solutions for probabilistic models having latent variables`
 
 What this means is that there exists a data generator process to which we can only collect (or it was only collected) part of the data $X$ associated with it, instead of the full data $X, Z$. Usually a model is constructed around the marginalized maximum likelihood estimator:
 

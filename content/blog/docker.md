@@ -8,6 +8,7 @@ summary: Docker info dump
 
 ---
 
+This document contains information about what docker is and some basic commands. This contains information that I would liked to read when I was starting figuring out what this tool does. It is primarily targeted to a non-so-technical audience like me who doesn't have a CS background.
 
 ## Docker
 Docker delivers software in packages called containers. It's main use is to kill the excuse "it runs on my computer" because if the software is ran on a docker container then it runs on every computer (if you can install docker on the new computer :)).
