@@ -2,8 +2,10 @@ baseURL = 'https://h4pz.co/'
 relativeURLs = true
 languageCode = 'en-us'
 title = "h4pZ"
-description = "ai, the wired and shell ghosts"
 image = "https://avatars.githubusercontent.com/u/13786968"
+
+[params]
+description = "Research engineer interested in creative AI applications. Personal site for technical blog posts and AI project showcases. ai, the wired and shell ghosts."
 
 [markup.goldmark.renderer]
     unsafe = true
