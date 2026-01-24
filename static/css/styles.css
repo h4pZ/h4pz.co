@@ -361,6 +361,23 @@ MEDIA QUERY: FOR THE TABLET
 }
 
 /*
+MERMAID DIAGRAMS
+*/
+pre.mermaid {
+  display: flex;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  margin: 2em 0;
+}
+
+pre.mermaid .node rect,
+pre.mermaid .node polygon {
+  rx: 4px;
+  ry: 4px;
+}
+
+/*
 MEDIA QUERY: FOR MOBILE ONLY
 */
 @media screen and (max-width: 768px) {
