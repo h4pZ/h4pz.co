@@ -156,7 +156,7 @@ In summary what REINFORCE does is to sample a trajectory by taking actions $a\_t
 
 
 # In the end
-...all of these things are tightly related in the sense that each one of them helps us navigate the intractable land of the hypothesis space $\Theta$ we have always dreamt about.
+...all of these things are tightly related in the sense that each one of them helps us navigate the intractable land of the hypothesis space $\mathcal{H}$ we have always dreamt about.
 
 
 
