@@ -1,8 +1,7 @@
 ---
 title: "From Empirical Risk Minimization to REINFORCE"
-date: 2026-01-24
-draft: true
-thumbnail: "/images/blog/docker/thumbnail.png"
+date: 2026-01-31
+thumbnail: "/images/blog/reinforce/thumbnail.png"
 summary: How are Empirical Risk Minimization, Montecarlo Estimation, Score Gradient Estimation and REINFORCE connected?
 ---
 
@@ -110,11 +109,63 @@ $$\theta\_{t+1} = \theta\_t + \alpha\_t \widehat{\nabla\_\theta J(\theta\_t)} = 
 
 ## REINFORCE
 
+Under the original definition of REINFORCE from Ronald J. Williams [[3]](#ref-3) we have that REINFORCE algorithms:
+
 > ...apply in general to any learner whose input-output mappings consists of a parameterized input-controlled distribution function from which outputs are randomly generated, and the corresponding algorithms modify the learner's distribution function on the basis of performance feedback. Because of the gradient approach used here, the only restriction on the potential applicability of these results is that certain obvious differentiability conditions must be met...
+
+In this setting, an agent interacts with an environment by taking actions and receiving rewards. The policy $\pi(a | s; \theta)$ is a probability distribution over actions $a$ given a state $s$, parameterized by $\theta$ (e.g., a neural network). At each timestep $t$, the agent samples an action $a\_t \sim \pi(a | s\_t; \theta)$ and receives a reward $r\_{t+1}$. A whole sequence of these interactions is called a trajectory:
+
+$$\tau = (s\_0, a\_0, r\_1, s\_1, a\_1, r\_2, \ldots, s\_T)$$
+
+The mapping from the Score Gradient Estimator to REINFORCE is:
+
+| Score Gradient Estimator | REINFORCE |
+|:------------------------:|:---------:|
+| $p(s; \theta)$ | $\pi(a \| s; \theta)$ (policy) |
+| $s$ | $a$ (action) |
+| $Q(s)$ | $G\_t$ (return) |
+
+The return $G\_t = \sum\_{k=0}^{\infty} \gamma^k r\_{t+k+1}$ is the discounted sum of future rewards starting from time $t$.
+
+The objective then becomes to maximize the expected return:
+
+$$J(\theta) = \underset{a\_t \sim \pi(a | s\_t; \theta)}{\mathbb{E}}[G\_0] = \underset{a\_t \sim \pi(a | s\_t; \theta)}{\mathbb{E}}\left[\sum\_{t=0}^{T} \gamma^t r\_{t+1}\right]$$
+
+
+Applying the Score Gradient Estimator, the gradient of the objective becomes:
+
+$$\nabla\_\theta J(\theta) = \underset{a\_t \sim \pi(a | s\_t; \theta)}{\mathbb{E}}\left[\sum\_{t=0}^{T} G\_t \nabla\_\theta \log \pi(a\_t | s\_t; \theta)\right]$$
+
+Note that applying the score gradient trick is needed since the expectation is defined with respect to the policy $\pi(a | s; \theta)$ which depends on the parameters $\theta$ we are differentiating:
+
+$$\nabla\_\theta J(\theta) = \nabla\_\theta \int G\_0 \pi(\tau; \theta) d\tau = \int G\_0 \nabla\_\theta \pi(\tau; \theta) d\tau$$
+
+The gradient lands on $\pi(\tau; \theta)$, so we cannot directly express this as an expectation. Using the log-derivative trick allows us to rewrite it as an expectation we can estimate from.
+
+And the Monte Carlo approximation using a single trajectory gives us the REINFORCE update:
+
+$$\nabla\_\theta J(\theta) \approx \sum\_{t=0}^{T} G\_t \nabla\_\theta \log \pi(a\_t | s\_t; \theta) = \widehat{\nabla\_\theta J(\theta)}$$
+
+Finally, the parameter update rule:
+
+$$\theta\_{t+1} = \theta\_t + \alpha\_t G\_t \nabla\_\theta \log \pi(a\_t | s\_t; \theta\_t)$$
+
+and we've arrived back to SGE!
+
+In summary what REINFORCE does is to sample a trajectory by taking actions $a\_t \sim \pi(a | s\_t; \theta)$, compute returns, and update the policy parameters in the direction that increases the probability of actions that led to higher returns. Or in other words, the score $\nabla\_\theta \log \pi(a\_t | s\_t; \theta)$ tells us how to change $\theta$ to make action $a\_t$ more likely, and we weight this by $G\_t$ so that actions leading to higher returns are reinforced more strongly.
+
+
+# In the end
+...all of these things are tightly related in the sense that each one of them helps us navigate the intractable land of the hypothesis space $\Theta$ we have always dreamt about.
+
+
+
 
 ## References
 
 <a id="ref-1"></a>[ 1 ] Vladimir N. Vapnik. The Nature of Statistical Learning Theory. Second Edition. Springer, 2000.
 
 <a id="ref-2"></a>[ 2 ] Herbert Robbins and Sutton Monro. A Stochastic Approximation Method. The Annals of Mathematical Statistics, 22(3):400-407, 1951.
+
+<a id="ref-3"></a>[ 3 ] Ronald J. Williams. Simple Statistical Gradient-Following Algorithms for Connectionist Reinforcement Learning. Machine Learning, 8:229-256, 1992.
 

@@ -10,6 +10,10 @@
   --blockquote-bg: rgba(45, 76, 71, 0.08);
   --blockquote-border: #2d4c47;
   --blockquote-text: #4a4a4a;
+  --table-border: rgba(45, 76, 71, 0.25);
+  --table-header-bg: rgba(45, 76, 71, 0.08);
+  --table-row-hover: rgba(45, 76, 71, 0.04);
+  --table-accent: rgba(45, 76, 71, 0.5);
 }
 
 [data-theme="dark"] {
@@ -24,4 +28,8 @@
   --blockquote-bg: rgba(181, 232, 224, 0.08);
   --blockquote-border: #b5e8e0;
   --blockquote-text: #c8c8c8;
+  --table-border: rgba(181, 232, 224, 0.2);
+  --table-header-bg: rgba(181, 232, 224, 0.06);
+  --table-row-hover: rgba(181, 232, 224, 0.04);
+  --table-accent: rgba(181, 232, 224, 0.4);
 }

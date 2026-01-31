@@ -267,6 +267,65 @@ blockquote footer::before {
   content: '— ';
 }
 
+/*
+TABLE STYLING
+*/
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2em 0;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.9em;
+}
+
+th {
+  background: var(--table-header-bg);
+  color: var(--primary-color);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 1em 1.25em;
+  text-align: left;
+  border-bottom: 2px solid var(--table-accent);
+}
+
+td {
+  padding: 0.875em 1.25em;
+  color: var(--default-text-color);
+  border-bottom: 1px solid var(--table-border);
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tbody tr {
+  transition: background 0.15s ease;
+}
+
+tbody tr:hover {
+  background: var(--table-row-hover);
+}
+
+tbody td:first-child {
+  position: relative;
+}
+
+tbody tr:hover td:first-child::before {
+  content: '>';
+  position: absolute;
+  left: -1.5em;
+  color: var(--secondary-color);
+  font-weight: 700;
+}
+
+@media screen and (max-width: 768px) {
+  th, td {
+    padding: 0.75em 0.875em;
+    font-size: 0.85em;
+  }
+}
+
 .blog-list {
   padding: 0;
 }
