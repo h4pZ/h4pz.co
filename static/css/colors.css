@@ -7,6 +7,9 @@
   --socials-color: #666666;
   --link-color: #2c5f7a;
   --link-hover-color: #8b4fb3;
+  --blockquote-bg: rgba(45, 76, 71, 0.08);
+  --blockquote-border: #2d4c47;
+  --blockquote-text: #4a4a4a;
 }
 
 [data-theme="dark"] {
@@ -18,4 +21,7 @@
   --socials-color: #a6a6a6;
   --link-color: #96c4d8;
   --link-hover-color: #e6a4fc;
+  --blockquote-bg: rgba(181, 232, 224, 0.08);
+  --blockquote-border: #b5e8e0;
+  --blockquote-text: #c8c8c8;
 }

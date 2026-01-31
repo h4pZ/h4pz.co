@@ -12,7 +12,7 @@ In this blog post I'll attempt to clearly link Empirical Risk Minimization, Mont
 
 Vapnik in his book **The Nature of Statistical Learning Theory** [[1]](#ref-1) defined the learning problem as: 
 
-`a problem of finding a desired dependence using a *limited* number of observations.`
+> a problem of finding a desired dependence using a *limited* number of observations.
 
 This dependence is defined under three components:
 
@@ -107,6 +107,10 @@ $$\approx \frac{1}{B} \sum\_{i=1}^{B} Q(s\_i) \nabla\_\theta \log p(s\_i; \theta
 This is the way we arrive at the gradient estimator $\widehat{\nabla\_\theta J(\theta)}$. This is called the Score Gradient Estimator since the gradient of the log probability distribution $\nabla\_\theta \log p(s; \theta)$ is called the score (or informant). Armed with this estimator we can update our stochastic parameter update process accordingly and optimize away:
 
 $$\theta\_{t+1} = \theta\_t + \alpha\_t \widehat{\nabla\_\theta J(\theta\_t)} = \theta\_t + \alpha\_t \frac{1}{B} \sum\_{i=1}^{B} Q(s\_i) \nabla\_\theta \log p(s\_i; \theta\_t)$$
+
+## REINFORCE
+
+> ...apply in general to any learner whose input-output mappings consists of a parameterized input-controlled distribution function from which outputs are randomly generated, and the corresponding algorithms modify the learner's distribution function on the basis of performance feedback. Because of the gradient approach used here, the only restriction on the potential applicability of these results is that certain obvious differentiability conditions must be met...
 
 ## References
 
