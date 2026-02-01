@@ -81,7 +81,7 @@ Imagine you have a function $Q(s)$ that you want to maximize or minimize and tha
 
 $$J(\theta) = \underset{s \sim p(s; \theta)}{\mathbb{E}}[Q(s)] = \int Q(s)  p(s; \theta) \, ds$$
 
-If we want to maximize the function by exploring the hypothesis space $\Theta$ in a similar fashion as above via stochastic approximation given that it's too large, we need to get an estimator of the gradient of the expectation in order to do a parameter update like:
+If we want to maximize the function by exploring the hypothesis space $\mathcal{H}$ in a similar fashion as above via stochastic approximation given that it's too large, we need to get an estimator of the gradient of the expectation in order to do a parameter update like:
 
 $$\theta\_{t+1} = \theta\_t + \alpha\_t \nabla\_\theta J(\theta\_t), \quad t=1,2,3,\ldots,T$$
 
